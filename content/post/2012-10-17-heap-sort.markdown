@@ -1,0 +1,387 @@
++++
+date = "2012-10-17 14:15:00+00:00"
+title = "Heap Sort"
+type = "post"
+tags = ["sorting", "algo", "c++"]
+categories = ["code"]
+series = ["Algorithm"]
++++
+
+Heap Sort algo has the following properties:
+
+
+
+	
+  * The top element (root) is always the next in order
+
+	
+  * This allows you to remove one element at a time (the root) and ensure that you are pulling out items in a sorted order
+
+	
+  * Always takes O(n*log(n)) time - worst case or best case
+
+	
+  * 
+
+	
+    * Pros and cons to both
+
+
+
+
+	
+  * Simple implementations require additional space to hold heap of size n
+
+	
+  * 
+
+	
+    * Hence space requirement is double of array size n
+
+	
+    * Not included in big-O notation so something to keep in mind
+
+
+
+
+	
+  * Not a stable sort
+
+	
+  * 
+
+	
+    * Original order of equal values may not be maintained
+
+
+
+
+
+Let's look at three versions of Heap Sort and see how they compare against each other. We will also find out what differentiates them from each other.
+
+<!-- more -->
+
+
+## Testing Notes
+
+
+
+
+
+	
+  * I compared three versions of of Heap Sort
+
+	
+  * 
+
+	
+    * First version (HeapSort_1) includes logic of sorting items while adding them one by one
+
+	
+    * Second version (HeapSort_2) and third version (HeapSort_3) are very similar to each other with very minor differences but the performance is different. Still some improvements can be made but for now HeapSort_3 seems to be better
+
+	
+    * 
+
+	
+      * There's still scope for both the versions to be better
+
+
+
+
+
+
+
+	
+  * Postincrement can be replaced with preincrement in most places which should improve the numbers even more
+
+
+
+
+## Code
+
+
+As usual the code is [available](https://github.com/abhi1010/Algorithms/blob/master/Algo_codes/HeapSort.cpp) here:
+
+[https://github.com/abhi1010/Algorithms](https://github.com/abhi1010/Algorithms)
+
+
+
+
+## Numbers
+
+
+**HeapSort_1**
+<table style="text-align:center;background-color:#efefef;width:100%;border-collapse:collapse;border:lightblue solid;" border="1" >
+<tbody >
+<tr >
+
+<td style="width:25%;" >
+</td>
+
+<td style="width:25%;" >**# of Items in Array**
+</td>
+
+<td style="width:25%;" >**Time Taken**
+</td>
+
+<td style="width:25%;" >**Average for 100 numbers**
+</td>
+</tr>
+<tr >
+
+<td rowspan="3" >**Random**
+</td>
+
+<td >10
+</td>
+
+<td >0.013543
+</td>
+
+<td >0.13543
+</td>
+</tr>
+<tr >
+
+<td >1K
+</td>
+
+<td >3.22043
+</td>
+
+<td >0.322043
+</td>
+</tr>
+<tr >
+
+<td >1M
+</td>
+
+<td >4770.14
+</td>
+
+<td >0.477014
+</td>
+</tr>
+<tr >
+
+<td rowspan="3" >**Sorted**
+</td>
+
+<td >10
+</td>
+
+<td >0.007507
+</td>
+
+<td >0.07507
+</td>
+</tr>
+<tr >
+
+<td >1K
+</td>
+
+<td >0.625425
+</td>
+
+<td >0.0625425
+</td>
+</tr>
+<tr >
+
+<td >1M
+</td>
+
+<td >633.142
+</td>
+
+<td >0.0633142
+</td>
+</tr>
+</tbody>
+</table>
+**HeapSort_2**
+<table style="text-align:center;background-color:#efefef;width:100%;border-collapse:collapse;border:lightblue solid;" border="1" >
+<tbody >
+<tr >
+
+<td style="width:25%;" >
+</td>
+
+<td style="width:25%;" >**# of Items in Array**
+</td>
+
+<td style="width:25%;" >**Time Taken**
+</td>
+
+<td style="width:25%;" >**Average for 100 numbers**
+</td>
+</tr>
+<tr >
+
+<td rowspan="3" >**Random**
+</td>
+
+<td >10
+</td>
+
+<td >0.019352
+</td>
+
+<td >0.19352
+</td>
+</tr>
+<tr >
+
+<td >1K
+</td>
+
+<td >3.86284
+</td>
+
+<td >0.386284
+</td>
+</tr>
+<tr >
+
+<td >1M
+</td>
+
+<td >8914.22
+</td>
+
+<td >0.891422
+</td>
+</tr>
+<tr >
+
+<td rowspan="3" >**Sorted**
+</td>
+
+<td >10
+</td>
+
+<td >0.011289
+</td>
+
+<td >0.11289
+</td>
+</tr>
+<tr >
+
+<td >1K
+</td>
+
+<td >3.49712
+</td>
+
+<td >0.349712
+</td>
+</tr>
+<tr >
+
+<td >1M
+</td>
+
+<td >6661.45
+</td>
+
+<td >0.666145
+</td>
+</tr>
+</tbody>
+</table>
+**HeapSort_3**
+<table style="text-align:center;background-color:#efefef;width:100%;border-collapse:collapse;border:lightblue solid;" border="1" >
+<tbody >
+<tr >
+
+<td style="width:25%;" >
+</td>
+
+<td style="width:25%;" >**# of Items in Array**
+</td>
+
+<td style="width:25%;" >**Time Taken**
+</td>
+
+<td style="width:25%;" >**Average for 100 numbers**
+</td>
+</tr>
+<tr >
+
+<td rowspan="3" >**Random**
+</td>
+
+<td >10
+</td>
+
+<td >0.016266
+</td>
+
+<td >0.16266
+</td>
+</tr>
+<tr >
+
+<td >1K
+</td>
+
+<td >0.968032
+</td>
+
+<td >0.0968032
+</td>
+</tr>
+<tr >
+
+<td >**1M**
+</td>
+
+<td >**900.004**
+</td>
+
+<td >**0.0900004**
+</td>
+</tr>
+<tr >
+
+<td rowspan="3" >**Sorted**
+</td>
+
+<td >10
+</td>
+
+<td >0.012845
+</td>
+
+<td >0.12845
+</td>
+</tr>
+<tr >
+
+<td >1K
+</td>
+
+<td >3.08637
+</td>
+
+<td >0.308637
+</td>
+</tr>
+<tr >
+
+<td >1M
+</td>
+
+<td >3839.23
+</td>
+
+<td >0.383923
+</td>
+</tr>
+</tbody>
+</table>
+

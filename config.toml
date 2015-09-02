@@ -1,0 +1,105 @@
+baseurl = "http://abhi1010.github.io/"
+languageCode = "en-us"
+title = "Coders Digest"
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+disqusShortname = "abhi1010"
+comments = "true"
+
+
+# pygmentsstyle = "manni"
+# pygmentsstyle = "igor"
+# pygmentsstyle = "xcode"
+# pygmentsstyle = "vim"
+# pygmentsstyle = "autumn"
+# pygmentsstyle = "vs"
+# pygmentsstyle = "rrt"
+# pygmentsstyle = "native"
+# pygmentsstyle = "perldoc"
+# pygmentsstyle = "borland"
+# pygmentsstyle = "tango"
+# pygmentsstyle = "emacs"
+# pygmentsstyle = "friendly"
+# pygmentsstyle = "monokai"
+# pygmentsstyle = "paraiso-dark"
+# pygmentsstyle = "colorful"
+# pygmentsstyle = "murphy"
+# pygmentsstyle = "bw"
+# pygmentsstyle = "pastie"
+# pygmentsstyle = "paraiso-light"
+# pygmentsstyle = "trac"
+# pygmentsstyle = "default"
+# pygmentsstyle = "fruity"
+
+pygmentsstyle = "pastie"
+pygmentsuseclasses = false
+theme = "hyde-a"
+
+[author]
+    name = "Test site"
+
+[permalinks]
+    # Optional. Change the permalink format for the 'post' content type.
+    # post = "/blog/:title/"
+    post = "/:year/:month/:title/"
+
+[taxonomies]
+    # Optional. Use if you want tags and lists.
+    category = "categories"
+    tag = "tags"
+
+
+
+#
+# All parameters below here are optional and can be mixed and matched.
+#
+[params]
+    # If false display full article contents in blog index.
+    # Otherwise show description and 'read on' link to individual blog post page.
+    # Default (if omitted) is true.
+    truncate = false
+
+    # Used when a given page doesn't set its own.
+    defaultDescription = "Your default page description"
+    defaultKeywords = "your,default,page,keywords"
+
+    # Changes sidebar background and link/accent colours.
+    # See below for more colour options.
+    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
+    theme = "theme-base-aa"
+
+    # Select a syntax highight.
+    # Check the static/css/highlight directory for options.
+    highlight = "sunburst"
+
+
+    # Displays under the author name in the sidebar, keep it short.
+    # You can use markdown here.
+    tagline = "... lost in reverie"
+
+
+    # Text for the top menu link, which goes the root URL for the site.
+    # Default (if omitted) is "Blog".
+    home = "Home"
+    disqus = "abhi1010"
+    disqusShortname = "abhi1010"
+
+
+
+[[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "posts"
+    url = "/post/"
+[[menu.main]]
+    name = "Tags"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -109
+    url = "/tags/"
+[[menu.main]]
+    name = "Categories"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -108
+    url = "/categories/"
