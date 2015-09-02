@@ -2,8 +2,8 @@
 date = "2014-04-08 07:00:00+00:00"
 title = "Tokenize a String using C++"
 type = "post"
-tags = ["c++", "tips"]
-categories = ["code"]
+tags = ["c++"]
+categories = ["code", "tips"]
 +++
 
 

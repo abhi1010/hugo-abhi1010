@@ -2,8 +2,8 @@
 date = "2008-03-03 04:58:00+00:00"
 title = "Talk to my... Flash?"
 type = "post"
-tags = ["tips"]
-categories = ["database"]
+tags = ["flash"]
+categories = ["database", "tips"]
 +++
 
 According to normal acceptable behaviour it is not possible to let flash talk to the computer, be it on desktop or web browser.

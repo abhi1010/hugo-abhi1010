@@ -2,8 +2,8 @@
 date = "2013-04-25 07:02:00+00:00"
 title = "Change Putty Window Title"
 type = "post"
-tags = ["tips", "bash", "putty"]
-categories = ["code"]
+tags = ["bash", "putty"]
+categories = ["code", "tips"]
 +++
 
 How to modify the Putty window title to a specific string?

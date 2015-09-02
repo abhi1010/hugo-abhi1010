@@ -2,8 +2,8 @@
 date = "2013-06-11 07:05:00+00:00"
 title = "Cursor Control in VIM Search"
 type = "post"
-tags = ["vim", "tips"]
-categories = ["code"]
+tags = ["vim"]
+categories = ["code", "tips"]
 +++
 
 Found a great way to search for keywords && control the location of cursor in vim. It is excellent if you want to do a particular task multiple times. Usually if you search the cursor will straight away take you to the start of search. What if you want to go to the end of the word you are searching for?

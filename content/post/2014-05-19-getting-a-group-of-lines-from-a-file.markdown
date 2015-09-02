@@ -2,8 +2,8 @@
 date = "2014-05-19 09:45:57+00:00"
 title = "Getting a group of lines from a file"
 type = "post"
-tags = ["awk", "bash", "tips"]
-categories = ["code"]
+tags = ["awk", "bash"]
+categories = ["code", "tips"]
 +++
 
 I've had this need quite a few times to pull out a section of logs that would begin with a particular line and end with another. grep is not exactly useful there because it only prints out sections based on line counters (using -A/B/C) lines based on a single search pattern.

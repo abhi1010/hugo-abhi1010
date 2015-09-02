@@ -2,8 +2,8 @@
 date = "2013-07-03 07:28:00+00:00"
 title = "CVS Cheat Sheet"
 type = "post"
-tags = ["bash", "cvs", "tips"]
-categories = ["code"]
+tags = ["bash", "cvs"]
+categories = ["code", "tips"]
 +++
 
 

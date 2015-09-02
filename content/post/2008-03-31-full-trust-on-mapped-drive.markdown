@@ -2,13 +2,12 @@
 date = "2008-03-31 18:26:00+00:00"
 title = "Full Trust on Mapped Drive"
 type = "post"
-tags = ["tips"]
-categories = ["code"]
+tags = ["visual studio"]
+categories = ["code", "tips"]
 +++
 
 Sometimes, when opening a web project from another mapped drive (not your own computer's hard disk) Visual Studio may complain something like this:
 
-    
     The project location is not trusted.
     
     Running the application may result in security exceptions when it
