@@ -27,6 +27,4 @@ I came up with a script that can run at almost same speeds using `grep/cat/awk`.
 
 Let's have a look at the script....
 
-<!-- more -->
-
-https://gist.github.com/abhi1010/924a5f12f3067ba0b3af
+{{< gist 924a5f12f3067ba0b3af >}}

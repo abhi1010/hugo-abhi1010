@@ -17,7 +17,7 @@ It is a non-comparative _integer_ sorting algorithm. It sorts data by grouping k
     * If memory is not really a concern, forget about this issue
   * Radix Sort, with at most d digits, takes O(d*(n+b)) time where b is the base
   * Use Radix Sort over Counting Sort when the numbers range from 1 to n-square for example.
-<!-- more -->
+  
 
 **Numbers**
 

@@ -26,7 +26,7 @@ Now that we have this out of the way, let's look at the code:
 
 <!-- more -->
 
-https://gist.github.com/abhi1010/3ada1d15b5bda319a54c
+{{< gist 3ada1d15b5bda319a54c >}}
 
 
 

@@ -8,8 +8,9 @@ categories = ["code"]
 How do you extend a control? Let's figure it out.
 
 
-**Why would you want to extend existing controls?        
-**Because some functionality may not exist exactly as you may need it. For example, let's take up ImageButton control example. It is a great control but it falls short when it comes to real world scenario. Mostly websites do a hover image clickable button where the text or background color of the button changes once you hover your mouse over it.
+**Why would you want to extend existing controls?**
+
+Because some functionality may not exist exactly as you may need it. For example, let's take up ImageButton control example. It is a great control but it falls short when it comes to real world scenario. Mostly websites do a hover image clickable button where the text or background color of the button changes once you hover your mouse over it.
 
  
 
@@ -44,11 +45,6 @@ Create a project for creating custom web control library. It automatically inclu
 Now ask yourself, what do you want to extend? A GridView? Replace WebControl with GridView. Let's follow our example with Hover Image Button Control. If you recall .Net already has ImageButton control that accepts one url for the image to be shown for that button, let's extend that one to include two Images rather than just one. In that case I would replace WebControl with ImageButton since I am going to extend ImageButton control. Let's call it HoverImageButton. Hence, the line changes to some thing like this:
 
 
-
-
-
-
-  
 
 
     
@@ -109,7 +105,7 @@ This is a very simple process. You have the javascript file and you know for sur
 
 This is how you do that. 
 
-https://gist.github.com/abhi1010/bfb075b6787d2616fde6
+{{< gist bfb075b6787d2616fde6 >}}
 
 
 
@@ -139,11 +135,11 @@ What is Attributes property for anyway? Well, it adds any extra "property" or "s
 
 Let's see how that's done. 
 
-https://gist.github.com/abhi1010/d0b66ef7b0f076e88042
+{{< gist d0b66ef7b0f076e88042 >}}
 
 
 
-Over here, I have told the class to include "onmouseover=ShowImageHoverButton(this, 'IMAGE_SOURCE')" as a property.
+Over here, I have told the class to include `"onmouseover=ShowImageHoverButton(this, 'IMAGE_SOURCE')"` as a property.
 
 
 
@@ -153,7 +149,7 @@ This is how it is rendered on the client browser:
 
 
 
-https://gist.github.com/abhi1010/6df972bf94b736545419
+{{< gist 6df972bf94b736545419 >}}
 
 
 
@@ -213,7 +209,7 @@ That's all. A few simple steps and your control is ready to be tested. Still, le
 
 
 
-https://gist.github.com/abhi1010/88222d3f94911fbec6f4
+{{< gist 88222d3f94911fbec6f4 >}}
 
 
 
@@ -268,15 +264,8 @@ Just take care of few pointers and you should be fine. Here they go:
     
     * When I tried putting them inside the folder it did not work, i took them out to the root folder and it worked instantly. I have not tried changing the JS file names but I am sure you can figure out some solution. 
 
-  
-
-
-
-
-
-
 
 
 **Here's all the code in case somebody needs it:** 
 
-https://gist.github.com/abhi1010/135e9bbf44f3d9a53cb8
+{{< gist 135e9bbf44f3d9a53cb8 >}}

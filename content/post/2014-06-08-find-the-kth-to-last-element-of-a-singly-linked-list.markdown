@@ -1,19 +1,3 @@
----
-author: abhipandey1010
-comments: true
-date: 2014-06-08 07:49:47+00:00
-layout: post
-slug: find-the-kth-to-last-element-of-a-singly-linked-list
-title: Find the Kth to Last Element of a Singly Linked List
-wordpress_id: 253
-categories:
-- Linux
-tags:
-- Algo
-- C++
-- Linked List
----
-
 +++
 date = "2014-06-08 07:49:47+00:00"
 title = "Find the Kth to Last Element of a Singly Linked List"
@@ -35,29 +19,7 @@ The suggested solution here is to use two pointers:
 
 Let's have a look at the code:
 
-{{< highlight c >}}    
-Node* findKthToLastElement (Node* node, unsigned short k)
-{
-    Node* secondRunner = node;
-    for(unsigned short i = 0; i < k; ++i)
-    {
-        if (secondRunner->next != NULL)
-            secondRunner = secondRunner->next;
-        else
-            return NULL;
-    }
-    while (secondRunner)
-    {
-        secondRunner = secondRunner->next;
-        node = node->next;
-    }
-    return node;
-}
-{{< /highlight >}}
-
-https://gist.github.com/abhi1010/43e289a9877fb9293680
-
-
+{{< gist 43e289a9877fb9293680 >}}
 
 
 As usual the code is available [here](https://github.com/abhi1010/Algorithms/blob/master/Algo_codes/Node.cpp):

@@ -10,6 +10,6 @@ Recently found a bug slash issue with Google Analytics new javscript software (p
 
 I tried a lot of ways but none seem to worked. Finally found a blog that remotely talked about SWFAddress!
 
-Well, the problem turns out that SWFAddress uses **ExternalInterface.call()** instead of getUrl() function internally and they don't go well together if used together.
+Well, the problem turns out that SWFAddress uses `ExternalInterface.call()` instead of getUrl() function internally and they don't go well together if used together.
 
 The solution was simple, since flash is using SWFAddress feature, every getUrl should be replaced with ExternalInterface.call(). Needless to say, everything seemed perfect again.

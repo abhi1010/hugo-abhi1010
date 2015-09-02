@@ -8,18 +8,19 @@ categories = ["code"]
 
 Writing code using VIM can be a bit overwhelming but it helps creating a few shortcuts there to make your life easier. Here I will discuss a few.
 
-  * First of all, it is always a good idea to set up your tabs and spaces
-  * Set up a shortcut to:
-  *     * Toggling of Auto-Indent while pasting source text; very useful in code (F2 in my provided script)
-    * Toggling of Auto-Scroll of Split windows (F3 in my provided script)
-    * Macro for Folding functions within the source code (@q in my provided script)
-    * Smart case search - based on whether the input is in caps or not
-    * Toggling of Mouse Usage in VIM window - to allow quick selection of text (F12 in my provided script)
+- First of all, it is always a good idea to set up your tabs and spaces
+- Set up shortcuts for:
+ - `Toggling of Auto-Indent` while pasting source text; very useful in code (_F2_ in my provided script)
+ - `Toggling of Auto-Scroll` of Split windows (_F3_ in my provided script)
+ - `Macro for Folding functions` within the source code (*_@q_* in my provided script)
+ - `Smart case search` - based on whether the input is in caps or not
+ - `Toggling of Mouse Usage` in VIM window - to allow quick selection of text (_F12_ in my provided script)
+
 
 Please see the provided script below to have a look.
 
 
 
-https://gist.github.com/abhi1010/6f190c9f3afd42881ef5
+{{< gist 6f190c9f3afd42881ef5 >}}
 
 

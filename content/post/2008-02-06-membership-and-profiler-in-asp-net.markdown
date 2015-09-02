@@ -15,7 +15,7 @@ Let's look at some of the more used tables. The index of some of the tables is g
 
  
 
-**`Table: aspnet_membership`**
+**Table: aspnet_membership**
 
  
 
@@ -25,7 +25,7 @@ Let's look at some of the more used tables. The index of some of the tables is g
   * NonClustered = UserID
  
 
-**`Table: aspnet_users`**
+**Table: aspnet_users**
 
  
 
@@ -37,12 +37,13 @@ Let's look at some of the more used tables. The index of some of the tables is g
   * Primary Key = `UserID `
  
 
-**`Table: aspnet_Profile`**
+**Table: aspnet_Profile**
 
  
 
   
   * Clustered Index = `UserID `
  
-
-`Bottomline - try to use ApplicationID in your queries otherwise your queries, for sure, will not run over the index at all and make it slow. This comes in effect if you are expecting high volume. `
+<blockquote>
+Bottomline - try to use ApplicationID in your queries otherwise your queries, for sure, will not run over the index at all and make it slow. This comes in effect if you are expecting high volume.
+</blockquote>

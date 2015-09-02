@@ -20,7 +20,7 @@ Here are few pointers to remember about Quick Sort:
   * It is a conquer-and-divide algo; with most of the work happening during partitioning phase
   * If you had to choose the optimum pivot then it should the median of the given array
   * Not a stable sort
-<!-- more -->
+
 
 ## Testing Notes
 

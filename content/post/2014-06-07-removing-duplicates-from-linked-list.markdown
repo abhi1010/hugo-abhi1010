@@ -31,6 +31,6 @@ As usual the [code](https://github.com/abhi1010/Algorithms/blob/master/Algo_code
 
 Here's a small sample as to how to do it:
 
-https://gist.github.com/abhi1010/e2b7117c20d0f591896f
+{{< gist e2b7117c20d0f591896f >}}
 
 

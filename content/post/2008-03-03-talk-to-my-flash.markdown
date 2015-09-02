@@ -14,10 +14,10 @@ There are always ways around a problem and there's one in this case as well.
 
 **Windows Forms**
 
-If you wanted to access .net functions on windows form then probably a good way to do that would be through ShockWaveFlashObjects library. It wraps all the functions that are available in ShockWave Objects and makes them available to you in .Net type safe way.
+If you wanted to access .net functions on windows form then probably a good way to do that would be through `ShockWaveFlashObjects` library. It wraps all the functions that are available in ShockWave Objects and makes them available to you in .Net type safe way.
 
 The easiest of ways to send data back and forth would be through
-"fscommand" function. The concept is to embed a flash file in windows form and then make use of fscommand function.
+`fscommand` function. The concept is to embed a flash file in windows form and then make use of `fscommand` function.
 
 Tip: Remember to remove the blue window bondary at the top so the flash appears as if its a standalone object and not embedded inside another form!
 

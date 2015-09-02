@@ -36,7 +36,7 @@ Please follow the shortened code to read an Excel file after the break.
 
 <!-- more -->
 
-https://gist.github.com/abhi1010/ee13f57720471c8feea2
+{{< gist ee13f57720471c8feea2 >}}
 
 
 

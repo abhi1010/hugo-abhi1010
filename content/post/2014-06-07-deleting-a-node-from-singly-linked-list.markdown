@@ -23,11 +23,11 @@ Deleting a Node from Singly Linked List is rather straight forward.
 Before we talk about the code, let's see how Linked List is setup.
 <!-- more -->
 
-https://gist.github.com/abhi1010/33be440bf1012773b7e1
+{{< gist 33be440bf1012773b7e1 >}}
 
 Now, below is the code for it....
 
-https://gist.github.com/abhi1010/bf9dbb193b4ff84ba3af
+{{< gist bf9dbb193b4ff84ba3af >}}
 
 
 ### Code

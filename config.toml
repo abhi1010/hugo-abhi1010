@@ -37,7 +37,7 @@ pygmentsuseclasses = false
 theme = "hyde-a"
 
 [author]
-    name = "Test site"
+    name = "Abhishek Pandey"
 
 [permalinks]
     # Optional. Change the permalink format for the 'post' content type.

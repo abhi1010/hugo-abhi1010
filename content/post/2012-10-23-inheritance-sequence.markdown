@@ -8,7 +8,9 @@ categories = ["code"]
 
 What is the output to the following code?
 
-[gist https://gist.github.com/8fac0155f30551df8bca /]<!-- more -->
+{{< gist 8fac0155f30551df8bca >}} 
+
+<!-- more -->
 
 _Output_
 

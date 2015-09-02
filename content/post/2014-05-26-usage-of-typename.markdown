@@ -8,23 +8,19 @@ categories = ["code"]
 
 What is wrong with the following code?
   
-
-https://gist.github.com/anonymous/f1f2246d04a935794e44
-  
+{{< gist 0bd5e4d910e4d8a7672e >}}
 
 The issue is very simple but hard to notice. If you try to compile this, you will get the following errors:
 
 
-<blockquote>main.cpp:24:5: error: need 'typename' before 'OuterStruct<T2>::InnerStruct' because 'OuterStruct<T2>' is a dependent scope
-OuterStruct<T2>::InnerStruct mUsingInner;
-^
-main.cpp: In function 'int main(int, char**)':
-main.cpp:34:13: error: 'struct InnerStruct_Wrapper<int>' has no member named 'mUsingInner'
-wrapper.mUsingInner = innerStrct;
-^</blockquote>
+    main.cpp:24:5: error: need 'typename' before 'OuterStruct<T2>::InnerStruct' because 'OuterStruct<T2>' is a dependent scope
+    OuterStruct<T2>::InnerStruct mUsingInner;
+    ^
+    main.cpp: In function 'int main(int, char**)':
+    main.cpp:34:13: error: 'struct InnerStruct_Wrapper<int>' has no member named 'mUsingInner'
+    wrapper.mUsingInner = innerStrct;
+    ^
 
-
-<!-- more -->
 
 **The Issue**
 
