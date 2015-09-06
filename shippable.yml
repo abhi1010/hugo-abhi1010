@@ -15,7 +15,7 @@ python:
 
 # Make folders for the reports, and create the SQL db
 before_script:
-  - echo 'repo is: ' $REPO_NAME
+  - echo `repo is:` $REPO_NAME
 #  - git remote set-url origin git@github.com:$REPO_NAME.git
 #  - git config --get remote.origin.url
   - git clone https://github.com/abhi1010/hyde-a.git
@@ -28,7 +28,7 @@ script:
 
 after_success:
   - echo `pwd`
-  - echo '----------------- CODE DEPLOYED ----------------'
+  - echo `----------------- CODE DEPLOYED ----------------`
 
 
 notifications:
@@ -39,3 +39,4 @@ notifications:
          on_failure: always
 
 cache: true
+
