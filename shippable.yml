@@ -36,7 +36,7 @@ after_success:
   - export Now_hourly=$(date +%d-%b-%H_%M) 
   - git config --global user.email "abhi.pandey@gmail.com"
   - git config --global user.name "Abhishek Pandey"
-  - cd abhi1010.github.io && git commit -am `$Now_hourly changes made to blog` && git push
+  - cd abhi1010.github.io && git commit -am '$Now_hourly changes made to blog' && git push
 
 
 
