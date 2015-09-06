@@ -15,7 +15,6 @@ python:
 
 # Make folders for the reports, and create the SQL db
 before_script:
-  - echo repo is: $REPO_NAME
 #  - git remote set-url origin git@github.com:$REPO_NAME.git
 #  - git config --get remote.origin.url
   - pwd
