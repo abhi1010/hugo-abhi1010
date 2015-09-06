@@ -8,19 +8,13 @@ python:
   # Contains AWS_SECRET_ACCESS_KEY and AWS_ACCESS_KEY_ID
   # + export PYTHONPATH=test/python/reconwisetestPy:main/python
 
-
-#install:
-#  - pip3.4 install -r requirements.txt
-#  - pip3.4 install awsebcli
-
-# Make folders for the reports, and create the SQL db
 before_script:
 #  - git remote set-url origin git@github.com:$REPO_NAME.git
 #  - git config --get remote.origin.url
   - git config --global push.default matching
   - pwd
   - mkdir -p themes
-  - git clone https://github.com/abhi1010/abhi1010.github.io.git
+  - git clone git@github.com:abhi1010/abhi1010.github.io.git
   - cd themes
   - git clone https://github.com/abhi1010/hyde-a.git
   - ls -R ../
@@ -37,7 +31,9 @@ after_success:
   - export Now_hourly=$(date +%d-%b-%H_%M) 
   - git config --global user.email "abhi.pandey@gmail.com"
   - git config --global user.name "abhi1010"
-  - cd abhi1010.github.io && git commit -am '$Now_hourly changes made to blog' && git push
+  - git config --get remote.origin.url
+  - git remote set-url origin git@github.com:abhi1010.github.io.git
+  - cd abhi1010.github.io && git commit -am 'Automated build from Shippable' && git push
 
 
 
