@@ -15,13 +15,16 @@ python:
 
 # Make folders for the reports, and create the SQL db
 before_script:
-  - echo `repo is:` $REPO_NAME
+  - echo repo is: $REPO_NAME
 #  - git remote set-url origin git@github.com:$REPO_NAME.git
 #  - git config --get remote.origin.url
+  - pwd
+  - mkdir -p themes
+  - cd themes
   - git clone https://github.com/abhi1010/hyde-a.git
-  - mkdir -p hugo-abhi1010/themes
-  - ln -s hyde-a hugo-abhi1010/themes/hyde-a
-  - ls -R
+  - ls -R ../
+  - pwd
+
 
 script:
   -  hugo
