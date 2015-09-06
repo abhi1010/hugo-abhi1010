@@ -21,17 +21,21 @@ before_script:
   - mkdir -p themes
   - cd themes
   - git clone https://github.com/abhi1010/hyde-a.git
+  - git clone https://github.com/abhi1010/abhi1010.github.io.git
   - ls -R ../
   - pwd
   - cd ../
 
 
 script:
-  -  hugo
+  -  hugo -d abhi1010.github.io
 
 after_success:
   - echo `pwd`
-  - echo `----------------- CODE DEPLOYED ----------------`
+  - Now_hourly=$(date +%d-%b-%H_%M) 
+  - cd abhi1010.github.io && git commit -am '$Now_hourly changes made to blog'
+
+
 
 
 notifications:
