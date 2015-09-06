@@ -23,6 +23,7 @@ before_script:
   - git clone https://github.com/abhi1010/hyde-a.git
   - ls -R ../
   - pwd
+  - cd ../
 
 
 script:
