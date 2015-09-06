@@ -17,6 +17,7 @@ python:
 before_script:
 #  - git remote set-url origin git@github.com:$REPO_NAME.git
 #  - git config --get remote.origin.url
+  - git config --global push.default matching
   - pwd
   - mkdir -p themes
   - git clone https://github.com/abhi1010/abhi1010.github.io.git
@@ -35,7 +36,7 @@ after_success:
   - echo `pwd`
   - export Now_hourly=$(date +%d-%b-%H_%M) 
   - git config --global user.email "abhi.pandey@gmail.com"
-  - git config --global user.name "Abhishek Pandey"
+  - git config --global user.name "abhi1010"
   - cd abhi1010.github.io && git commit -am '$Now_hourly changes made to blog' && git push
 
 
