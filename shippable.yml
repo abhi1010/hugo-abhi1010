@@ -19,20 +19,22 @@ before_script:
 #  - git config --get remote.origin.url
   - pwd
   - mkdir -p themes
+  - git clone https://github.com/abhi1010/abhi1010.github.io.git
   - cd themes
   - git clone https://github.com/abhi1010/hyde-a.git
-  - git clone https://github.com/abhi1010/abhi1010.github.io.git
   - ls -R ../
   - pwd
   - cd ../
 
 
 script:
-  -  hugo -d abhi1010.github.io
+  - hugo -d abhi1010.github.io/
+  - ls -R 
 
 after_success:
   - echo `pwd`
   - Now_hourly=$(date +%d-%b-%H_%M) 
+  - echo `time = $Now_hourly`
   - cd abhi1010.github.io && git commit -am '$Now_hourly changes made to blog'
 
 
