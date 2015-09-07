@@ -32,8 +32,9 @@ comments = "true"
 # pygmentsstyle = "default"
 # pygmentsstyle = "fruity"
 
-pygmentsstyle = "pastie"
+pygmentsstyle = "tango"
 pygmentsuseclasses = false
+
 theme = "hyde-a"
 
 [author]
@@ -71,7 +72,8 @@ theme = "hyde-a"
 
     # Select a syntax highight.
     # Check the static/css/highlight directory for options.
-    highlight = "sunburst"
+    # highlight = "sunburst"
+    # highlight = "monokai"
 
 
     # Displays under the author name in the sidebar, keep it short.

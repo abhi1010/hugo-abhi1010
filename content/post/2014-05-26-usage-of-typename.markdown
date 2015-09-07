@@ -12,14 +12,14 @@ What is wrong with the following code?
 
 The issue is very simple but hard to notice. If you try to compile this, you will get the following errors:
 
-
+{{< highlight console >}}
     main.cpp:24:5: error: need 'typename' before 'OuterStruct<T2>::InnerStruct' because 'OuterStruct<T2>' is a dependent scope
     OuterStruct<T2>::InnerStruct mUsingInner;
     ^
     main.cpp: In function 'int main(int, char**)':
     main.cpp:34:13: error: 'struct InnerStruct_Wrapper<int>' has no member named 'mUsingInner'
     wrapper.mUsingInner = innerStrct;
-    ^
+{{< /highlight >}}
 
 
 **The Issue**

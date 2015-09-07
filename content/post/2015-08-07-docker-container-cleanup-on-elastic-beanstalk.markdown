@@ -16,7 +16,7 @@ Next, find out what container processes you have going on.
 You might see something like this:
 
     
-{{< highlight bash >}}
+{{< highlight console >}}
     CONTAINER ID        IMAGE                              COMMAND             CREATED             STATUS              PORTS               NAMES
     1611e5ebe2c0        aws_beanstalk/staging-app:latest   "supervisord -n"    About an hour ago                                           boring_galileo
     e59d0dd8bba1        aws_beanstalk/staging-app:latest   "supervisord -n"    About an hour ago                                           desperate_yalow
@@ -26,19 +26,16 @@ You might see something like this:
 Ideally, we want to "forcibly remove" all images (and hence the folders from `/var/lib/docker/vfs/dir` directory) that are not in use anymore.
 Just run the following to test whether it works:
 
-{{< highlight bash >}}
+{{< highlight console >}}
     docker rmi -f `docker images -aq`
 {{< /highlight >}}
 
 You might run into trouble where docker says that all those images already have a container that is running them. This means those container are orphaned but not killed as we thought them to be. Let's remove the shared volumes if any, for each one of them.
 
-{{< highlight bash >}}
+{{< highlight console >}}
     docker rm -fv `docker ps -aq` 
 {{< /highlight >}}
 
-
-    docker rm -fv `docker ps -aq`
-    
 
 This will
 	
@@ -47,7 +44,7 @@ This will
 
 
 You should see a lot more space now on your beanstalk instance.
-{{< highlight bash >}}
+{{< highlight console >}}
     [root@ip dir]# df -h
     Filesystem      Size  Used Avail Use% Mounted on
     /dev/xvda1      7.8G  1.8G  5.9G  24% /

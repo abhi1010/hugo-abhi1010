@@ -24,12 +24,12 @@ script:
 
 after_success:
   - echo `pwd`
-  - export Now_hourly=$(date +%d-%b-%H_%M) 
+  - export NOW_HOUR=$(date +%d-%b-%H_%M) 
   - git config --global user.email "abhi.pandey@gmail.com"
   - git config --global user.name "abhi1010"
   - git config --get remote.origin.url
   - git remote set-url origin git@github.com:abhi1010.github.io.git
-  - cd abhi1010.github.io && git commit -am 'Automated build from Shippable' && git push
+  - cd abhi1010.github.io && git commit -am 'Automated build from Shippable'$NOW_HOUR && git push
 
 
 notifications:
