@@ -6,6 +6,7 @@ python:
 
 install:
   - pip install Pygments
+  - pip3.4 install Pygments
   
 #env:
 #  - secure: FL1z3nqFHvqqlfnUAV9hYpjQXpExz6NFCSIfFue0noCpN+jprPOAGb1sV+IWHnby21+NU5mkBBmvyUPQ3PvnB13FVg5XaYXgPTzrxtoFqJzVgN3zvuNijAvD1McL01Nip1kHXUMAvsIOSjigaxcaHU9S/itfmZdx59MmCvUxSi2WHagLAxHAi+O1fk0MsW3tEzaDFp0/6RaSfUbl9hYYIVFuStotKX//8z4lvXTOgwOho2GurZz5SuGgur6FSQOHQ/Xltyc39zgt1iOAGloUg5mLRt1uBvJeRoYGfb/5vVgqjtlQECGhKjB4aIp3UKItU59SN0ZDIgxtPZuMQekEtA==
