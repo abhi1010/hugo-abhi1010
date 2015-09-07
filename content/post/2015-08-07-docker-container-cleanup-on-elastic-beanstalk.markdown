@@ -35,6 +35,8 @@ You might run into trouble where docker says that all those images already have 
 {{< highlight bash >}}
     docker rm -fv `docker ps -aq` 
 {{< /highlight >}}
+    docker rm -fv `docker ps -aq`
+    
 
 This will
 	
