@@ -19,10 +19,8 @@ Duplicates can be removed in many ways:
 
 The internal structure itself for the algo can either be map or set based. When using map the Node itself can be saved thereby making your life easier if you are creating a new Linked List. However sets can be very useful if we are just iterating through the Linked List and simply deleting items that are being repetetive. This is also a great spacesaver. Hence we decided to go down this path.
 
-<!-- more -->
 
-
-### Code
+# Code
 
 
 As usual the [code](https://github.com/abhi1010/Algorithms/blob/master/Algo_codes/Node.cpp) is available here:

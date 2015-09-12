@@ -24,13 +24,11 @@ Well, there are some solutions possible. The solution, I came up with, is a bit 
 
 Now that we have this out of the way, let's look at the code:
 
-<!-- more -->
 
 {{< gist 3ada1d15b5bda319a54c >}}
 
 
-
-### Code
+# Code
 
 
 As usual the code is available [here](https://github.com/abhi1010/Algorithms/blob/master/Algo_codes/Node.cpp):
