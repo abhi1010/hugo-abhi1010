@@ -30,6 +30,7 @@ after_success:
   - git config --get remote.origin.url
   - git remote set-url origin git@github.com:abhi1010.github.io.git
   - cd abhi1010.github.io && git commit -am 'Automated build from Shippable - '$NOW_HOUR && git push
+  - git status -s
 
 
 notifications:
