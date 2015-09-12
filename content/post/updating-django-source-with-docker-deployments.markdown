@@ -1,16 +1,13 @@
 +++
 categories = ["code", "continuous delivery"]
-tags = ["docker", "django"]
+tags = ["docker", "django", "uwsgi", "git", "supervisord"]
 date = "2015-09-04T00:11:51+08:00"
-description = ""
-keywords = []
-title = "updating django source with docker deployments"
-draft = true
+title = "Updating Django Source with Docker Deployments"
 +++
 
 While deploying docker multiple times, you may not want to copy over your `Django` source code every time you do a deployment.
 
-## Setting up `supervisord`
+# Setting up `supervisord`
 
 Luckily there is an easy way to manage this. Since you are working with `Django`, there is a good chance that you are also managing the processes (like `uwsgi`) with `supervisord`.
 
@@ -25,19 +22,19 @@ Here's a sample code:
 
 {{< highlight bash >}}
     [program:source-updater]
-    redirect_stderr=true
-    stdout_logfile=/shared/source_code_updater.log
+    redirect_stderr = true
+    stdout_logfile = /shared/source_code_updater.log
     directory = /ws/
     command = /ws/source_code_updater.sh
     autorestart=False
 {{< /highlight >}}
 
-## Updating the source code
+# Updating the source code
 
 Few things are important to note in a `docker` deployment:
 
 - Not every commit needs to be deployed
-- Filter your commits to only allow _deployable_ code to be updated on `docker`
+- Filter your commits to only allow **_deployable_** code to be updated on `docker`
 - Include regression, unit and system tests to be part of your build process
 - Once everything has been confirmed to be working, tag your code so that you know it is worthy of going to docker
 - Another way would be to manage this process through branches and merge only if everything passes
@@ -52,3 +49,18 @@ With that idea, do a checkout and update the source code according to specific t
 {{< /highlight >}}
 
 
+# Telling `uwsgi` about the updated source code
+
+Once you have updated your source code, you need to re-load the project onto `uwsgi` so that `nginx` or `apache` can pick it up.
+The simplest way to achieve it using the config parameter of `uwsgi`: `--touch-reload`. It will _reload uWSGI if the specified file is modified/touched_
+
+Just remember to setup `supervisord` in your `Dockerfile` with this config parameter.
+
+{{< highlight bash >}}
+[program:app-uwsgi]
+redirect_stderr = true
+stdout_logfile = /var/shared/_uwsgi.log
+command = /ws/ve_envs/rwv2/bin/uwsgi --touch-reload=/ws/wsgi.ini --ini /ws/wsgi.ini
+{{< /highlight >}}
+
+You can choose any file. I choose `uwsgi.ini` because the contents never really need to change in it. 
