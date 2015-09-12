@@ -31,7 +31,7 @@ after_success:
   - git remote set-url origin git@github.com:abhi1010.github.io.git
   - cd abhi1010.github.io
   - git status -s
-  - git add -i a *
+  - echo -e "a\n*\nq\n"|git add -i
   - git commit -am 'Automated build from Shippable - '$NOW_HOUR && git push
 
 
