@@ -11,6 +11,7 @@ before_script:
   - git clone https://github.com/abhi1010/hyde-a.git
   - tail hyde-a/static/css/custom-additions.css
   - cd ../
+  - if [[ -f static ]]; then echo 'link exists already'; else ln -s themes/hyde-a/static; fi
 
 script:
   - hugo -d abhi1010.github.io/
