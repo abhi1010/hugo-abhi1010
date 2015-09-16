@@ -15,7 +15,7 @@ Next, find out what container processes you have going on.
 
 You might see something like this:
 
-    
+
 {{< highlight console >}}
     CONTAINER ID        IMAGE                              COMMAND             CREATED             STATUS              PORTS               NAMES
     1611e5ebe2c0        aws_beanstalk/staging-app:latest   "supervisord -n"    About an hour ago                                           boring_galileo
@@ -51,3 +51,14 @@ You should see a lot more space now on your beanstalk instance.
     devtmpfs        490M   96K  490M   1% /dev
     tmpfs           499M     0  499M   0% /dev/shm
 {{< /highlight >}}
+
+
+
+# Last Resort
+If you feel that all this is not working, then you can try one of the scripts provided by `docker` itself at 
+[GitHub](https://github.com/docker/docker/blob/master/contrib/nuke-graph-directory.sh)
+
+It will delete the folders under `/var/lib/docker` and try to do it responsibly.
+
+
+
