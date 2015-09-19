@@ -32,7 +32,8 @@ after_success:
   - git status -s
   - echo -e "a\n*\nq\n"|git add -i
   - git commit -vam 'Automated build from Shippable - '$NOW_HOUR
-  - git push
+  - git remote show origin
+  - git push -v
 
 
 notifications:
