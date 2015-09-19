@@ -9,7 +9,7 @@ before_script:
   - git config --global user.email "abhi.pandey@gmail.com"
   - git config --global user.name "abhi1010"
   - git config --get remote.origin.url
-  - git remote set-url origin git@github.com:abhi1010.github.io.git
+  - git remote set-url origin git@github.com:abhi1010/abhi1010.github.io.git
   - git clone git@github.com:abhi1010/hugo-abhi1010.git
   - cd themes
   - git clone git@github.com:abhi1010/hyde-a.git
@@ -25,7 +25,7 @@ after_success:
   - export NOW_HOUR=$(date +%d-%b-%H_%M)
   - pwd && ls -R
   - git config --get remote.origin.url
-  - git remote set-url origin git@github.com:abhi1010.github.io.git
+  - git remote set-url origin git@github.com:abhi1010/abhi1010.github.io.git
 #  - git remote add origin git@github.com:abhi1010.github.io.git
   - cd abhi1010.github.io
   - pwd
