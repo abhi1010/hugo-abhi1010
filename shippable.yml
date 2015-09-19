@@ -10,7 +10,7 @@ before_script:
   - git config --global user.name "abhi1010"
   - git config --get remote.origin.url
   - git remote set-url origin git@github.com:abhi1010.github.io.git
-  - git clone git@github.com:abhi1010.github.io.git
+  - git clone git@github.com:abhi1010/hugo-abhi1010.git
   - cd themes
   - git clone https://github.com/abhi1010/hyde-a.git
   - tail hyde-a/static/css/custom-additions.css
