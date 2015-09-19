@@ -26,11 +26,13 @@ after_success:
   - pwd && ls -R
   - git config --get remote.origin.url
   - git remote set-url origin git@github.com:abhi1010.github.io.git
+  - git remote add origin git@github.com:abhi1010.github.io.git
   - cd abhi1010.github.io
   - pwd
   - git status -s
   - echo -e "a\n*\nq\n"|git add -i
-  - git commit -vam 'Automated build from Shippable - '$NOW_HOUR && git push
+  - git commit -vam 'Automated build from Shippable - '$NOW_HOUR
+  - git push
 
 
 notifications:
