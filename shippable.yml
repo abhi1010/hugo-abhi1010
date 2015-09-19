@@ -23,7 +23,9 @@ script:
 after_success:
   - echo `pwd`
   - export NOW_HOUR=$(date +%d-%b-%H_%M)
+  - pwd && ls -R
   - cd abhi1010.github.io
+  - pwd
   - git status -s
   - echo -e "a\n*\nq\n"|git add -i
   - git commit -vam 'Automated build from Shippable - '$NOW_HOUR && git push
