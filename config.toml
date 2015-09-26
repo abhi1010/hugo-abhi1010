@@ -87,6 +87,9 @@ theme = "hyde-a"
     disqus = "abhi1010"
     disqusShortname = "abhi1010"
 
+    # Google analytics user id for tracking
+    googleAnalytics = "UA-68135443-1"
+
 
 
 [[menu.main]]

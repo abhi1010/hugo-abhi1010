@@ -4,3 +4,5 @@ ha
 public/*
 tmp/*
 themes/hyde-a
+scratches/*
+local.toml
