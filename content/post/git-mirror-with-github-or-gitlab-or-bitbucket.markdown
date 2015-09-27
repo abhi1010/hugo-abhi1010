@@ -1,5 +1,4 @@
 +++
-categories = []
 date = "2015-09-27T13:30:10+08:00"
 description = ""
 categories = ["continuous delivery", "code"]
