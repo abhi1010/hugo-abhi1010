@@ -2,7 +2,7 @@
 date = "2008-05-14 21:43:00+00:00"
 title = "Visual Studio 2008 crashes while adding items"
 type = "post"
-tags = ["c#", "visual studio"]
+tags = ["c-sharp", "visual studio"]
 categories = ["code"]
 +++
 

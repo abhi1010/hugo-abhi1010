@@ -2,7 +2,7 @@
 date = "2013-10-13 05:59:22+00:00"
 title = "Ideas for Shared Memory in Linux"
 type = "post"
-tags = ["c#"]
+tags = ["c-sharp"]
 categories = ["code"]
 +++
 

@@ -2,7 +2,7 @@
 date = "2007-10-26 16:36:00+00:00"
 title = "Use of yield statement"
 type = "post"
-tags = ["c#"]
+tags = ["c-sharp"]
 categories = ["code"]
 +++
 

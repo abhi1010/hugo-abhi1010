@@ -2,7 +2,7 @@
 date = "2008-03-11 07:55:00+00:00"
 title = "How to protect from SQL Injections in ASP.NET"
 type = "post"
-tags = ["asp.net"]
+tags = ["sql"]
 categories = ["code"]
 +++
 

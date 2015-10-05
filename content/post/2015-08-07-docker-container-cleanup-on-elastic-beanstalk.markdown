@@ -3,7 +3,7 @@ date = "2015-08-07T14:59:18-04:00"
 title = "Docker Container cleanup on Elastic Beanstalk"
 type = "post"
 tags = ["aws", "beanstalk", "docker"]
-categories = ["Linux"]
+categories = ["continuous delivery", "code"]
 +++
 
 

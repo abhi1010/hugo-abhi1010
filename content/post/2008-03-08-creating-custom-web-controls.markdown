@@ -2,7 +2,7 @@
 date = "2008-03-08 22:30:00+00:00"
 title = "Creating Custom Web Controls"
 type = "post"
-tags = ["c#", "asp.net"]
+tags = ["c-sharp"]
 categories = ["code"]
 +++
 How do you extend a control? Let's figure it out.

@@ -2,7 +2,7 @@
 date = "2008-03-08 10:26:00+00:00"
 title = "Blogs I like"
 type = "post"
-tags = ["c#", "sql"]
+tags = ["c-sharp", "sql"]
 categories = ["code"]
 +++
 

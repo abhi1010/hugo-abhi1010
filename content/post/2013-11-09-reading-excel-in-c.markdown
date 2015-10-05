@@ -2,7 +2,7 @@
 date = "2013-11-09 23:51:00+00:00"
 title = "Reading Excel in C#"
 type = "post"
-tags = ["c#", "excel"]
+tags = ["c-sharp", "excel"]
 categories = ["code"]
 +++
 

@@ -2,7 +2,7 @@
 date = "2008-03-08 13:55:00+00:00"
 title = "StringBuilder vs String joins"
 type = "post"
-tags = ["c#"]
+tags = ["c-sharp"]
 categories = ["code"]
 +++
 

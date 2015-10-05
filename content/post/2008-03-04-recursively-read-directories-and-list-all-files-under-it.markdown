@@ -2,7 +2,7 @@
 date = "2008-03-04 07:49:00+00:00"
 title = "Recursively read directories and list all files under it"
 type = "post"
-tags = ["c#"]
+tags = ["c-sharp"]
 categories = ["code"]
 +++
 

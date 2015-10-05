@@ -2,7 +2,7 @@
 date = "2008-03-31 08:23:00+00:00"
 title = "Tag your namespaces"
 type = "post"
-tags = ["c#"]
+tags = ["c-sharp"]
 categories = ["code"]
 +++
 
