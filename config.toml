@@ -1,4 +1,4 @@
-baseurl = "http://abhi1010.github.io/"
+baseurl = "http://abhipandey.com/"
 languageCode = "en-us"
 title = "Coders Digest"
 contentdir = "content"
@@ -78,7 +78,7 @@ theme = "hyde-a"
 
     # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
-    tagline = "... lost in reverie"
+    tagline = "['Code', 'Debug', 'Deploy']"
 
 
     # Text for the top menu link, which goes the root URL for the site.
