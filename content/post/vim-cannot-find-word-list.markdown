@@ -7,7 +7,7 @@ categories = ["tips"]
 title = "vim cannot find word list"
 +++
 
-After installing [spf13 vim](http://vim.spf13.com/) every time I would open a file I had trouble with two things:
+After installing [spf13 vim](http://vim.spf13.com/) every time I would open a file I had trouble with two things on my mac:
  
  - File opening would halt in the middle with the following error :  **Cannot find word list "en.utf-8.spl" or "en.ascii.spl"**
  - Syntax highlighting also failed thereafter
