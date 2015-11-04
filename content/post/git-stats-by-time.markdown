@@ -3,6 +3,8 @@ categories = ["code"]
 tags = ["bash", "git"]
 date = "2015-09-17T11:06:06+08:00"
 title = "Git LOC Stats by Time Range"
+description = "LOC stats using git"
+keywords = ["LOC", "git stats"]
 +++
 
 

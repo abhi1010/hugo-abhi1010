@@ -4,6 +4,8 @@ title = "Setting up your VIM... Your style"
 type = "post"
 tags = ["bash", "vim", "tips"]
 categories = ["code"]
+description = "How to setup your vimrc"
+keywords = ["vimrc", "bash", "linux", "style"]
 +++
 
 Writing code using VIM can be a bit overwhelming but it helps creating a few shortcuts there to make your life easier. Here I will discuss a few.

@@ -3,6 +3,8 @@ categories = ["code"]
 tags = ["django", "python", "code"]
 date = "2015-09-04T00:17:10+08:00"
 title = "Premailers for Django"
+description = "What premailer to use for django"
+keywords = ["premailer", "django", "python"]
 draft = true
 +++
 

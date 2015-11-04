@@ -4,6 +4,8 @@ title = "Global Search in VIM"
 type = "post"
 tags = ["bash", "vim"]
 categories = ["code"]
+description = "How to do global search in VIM"
+keywords = ["vim global search", "vim search"]
 +++
 
 

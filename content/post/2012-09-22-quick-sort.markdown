@@ -5,6 +5,8 @@ type = "post"
 tags = ["sorting", "algo", "c++"]
 categories = ["code"]
 series = ["Algorithm"]
+description = "Quick Sort Implementation"
+keywords = ["quick sort", "algorithm"]
 +++
 
 Quick Sort is an efficient divide and conquer algorithm performed in two phases - partition and sorting phase.

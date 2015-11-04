@@ -4,6 +4,8 @@ title = "Full Trust on Mapped Drive"
 type = "post"
 tags = ["visual studio"]
 categories = ["code", "tips"]
+description = "How to have full trust on a mapped drive"
+keywords = ["windows mapped drive", "full trust"]
 +++
 
 Sometimes, when opening a web project from another mapped drive (not your own computer's hard disk) Visual Studio may complain something like this:

@@ -5,6 +5,8 @@ type = "post"
 tags = ["sorting", "algo", "c++"]
 categories = ["code"]
 series = ["Algorithm"]
+description = "Merge Sort Implementation"
+keywords = ["merge sort", "algorithm"]
 +++
 
 Merge Sort

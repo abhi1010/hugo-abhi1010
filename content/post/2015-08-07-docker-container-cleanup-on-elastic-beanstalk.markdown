@@ -4,6 +4,8 @@ title = "Docker Container cleanup on Elastic Beanstalk"
 type = "post"
 tags = ["aws", "beanstalk", "docker"]
 categories = ["continuous delivery", "code"]
+description = "How to remove directories orphaned by docker on elastic beanstalk"
+keywords = ["elastic beanstalk", "docker cleanup", "docker", "vfs"]
 +++
 
 

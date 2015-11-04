@@ -4,6 +4,8 @@ title = "Reading Excel in C#"
 type = "post"
 tags = ["c-sharp", "excel"]
 categories = ["code"]
+description = "How to read Excel in C#"
+keywords = ["excel reading code", "C#", ".NET"]
 +++
 
 

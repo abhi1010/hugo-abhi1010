@@ -4,6 +4,8 @@ title = "Talk to my... Flash?"
 type = "post"
 tags = ["flash"]
 categories = ["database", "tips"]
+description = "How to let flash communicate with the computer's desktop or web browser"
+keywords = ["flash", "flash to desktop", "database"]
 +++
 
 According to normal acceptable behaviour it is not possible to let flash talk to the computer, be it on desktop or web browser.

@@ -4,10 +4,13 @@ title = "Membership and Profiler in ASP.NET"
 type = "post"
 tags = ["sql"]
 categories = ["database"]
+description = "Usage of ApplicationID in membership and profiler in asp.net"
+keywords = ["sql", "database", "asp.net"]
 +++
 
 
-Whenever you are using Sql Membership and Profiler classes - Trying to generate reports make sure your query's WHERE clause is using "indexed" column names at least.
+Whenever you are using Sql Membership and Profiler classes - 
+Trying to generate reports make sure your query's WHERE clause is using "indexed" column names at least.
 
  
 

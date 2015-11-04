@@ -3,6 +3,8 @@ categories = ["code", "continuous delivery"]
 tags = ["docker", "nginx", "aws", "beanstalk"]
 date = "2015-08-14T00:19:51+08:00"
 title = "Sharing folders on Beanstalk Docker"
+description = "How to share folders on Beanstalk Docker instance with EC2"
+keywords = ["EC2", "folders", "beanstalk", "docker", "aws"]
 +++
 
 It is very easy to setup volume sharing in `docker`. You ideally want the following folders to be shared when a new `docker` is initialized for you:

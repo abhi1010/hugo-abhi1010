@@ -4,6 +4,8 @@ title = "Tokenize a String using C++"
 type = "post"
 tags = ["c++"]
 categories = ["code", "tips"]
+description = "How to tokenize a string using C++"
+keywords = ["tokenize", "string tokenizer"]
 +++
 
 

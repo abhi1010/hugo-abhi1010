@@ -1,9 +1,10 @@
 +++
 date = "2015-09-27T13:30:10+08:00"
-description = ""
 categories = ["continuous delivery", "code"]
 tags = ["aws", "beanstalk", "deployment", "git"]
 title = "Automated Git Mirror With GitHub or Gitlab or Bitbucket"
+description = "How to automate git mirror"
+keywords = ["git", "mirroring", "GitHub", "Gitlab", "Bitbucket"]
 +++
 
 # Experience with Gitlab CI

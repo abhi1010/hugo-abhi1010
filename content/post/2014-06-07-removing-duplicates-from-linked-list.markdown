@@ -4,6 +4,8 @@ title = "Removing Duplicates from Linked List"
 type = "post"
 tags = ["c++", "algo", "linked list"]
 categories = ["code"]
+description = "How to remove duplicate entries from a linked list"
+keywords = ["duplicates", "linked list"]
 +++
 
 Duplicates can be removed in many ways:

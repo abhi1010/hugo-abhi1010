@@ -4,6 +4,8 @@ title = "How to protect from SQL Injections in ASP.NET"
 type = "post"
 tags = ["sql"]
 categories = ["code"]
+description = "How to avoid sql injections"
+keywords = ["sql injections"]
 +++
 
 Some good links to figure out how to save your code's ass from being thrashed by SQL Injections

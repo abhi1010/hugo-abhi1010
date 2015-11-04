@@ -4,6 +4,8 @@ title = "Usage of typename"
 type = "post"
 tags = ["c++"]
 categories = ["code"]
+description = "Typename tutorial"
+keywords = ["typename", "C++"]
 +++
 
 What is wrong with the following code?

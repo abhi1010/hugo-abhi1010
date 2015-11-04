@@ -3,6 +3,8 @@ categories = ["code", "continuous delivery"]
 tags = ["nginx", "beanstalk", "docker"]
 date = "2015-09-04T00:14:35+08:00"
 title = "Nginx Upload limits on Beanstalk Docker"
+description = "How to modify nginx settings on aws beanstalk docker"
+keywords = ["aws", "beanstalk", "docker", "nginx"]
 +++
 
 If I am not wrong, `nginx` only allows you to upload up till max 2Mb of data by default. If you are doing a `docker` deployment on `beanstalk` you may to remember to change that not once but twice!

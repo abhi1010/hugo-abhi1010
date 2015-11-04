@@ -3,6 +3,8 @@ categories = ["continuous delivery", "code"]
 tags = ["aws", "beanstalk", "deployment", "docker", "python", "supervisord"]
 date = "2015-09-04T00:17:10+08:00"
 title = "Elastic Beanstalk Deployment Automation"
+description = "How to automate beanstalk deployment"
+keywords = ["aws", "beanstalk", "deployment", "docker", "python", "supervisord"]
 +++
 
 We are going to talk about a setup where **all you need to do it _commit_ your code and all the rest of the steps from unit tests to deployment can be taken care of by some externally hosted cloud platform that provides continuous integration.**

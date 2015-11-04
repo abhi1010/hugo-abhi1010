@@ -4,6 +4,8 @@ title = "32 bit vs 64 bit"
 type = "post"
 tags = ["c++"]
 categories = ["code"]
+description = "When should you use 64 bit compilation"
+keywords = ["64vs32", "64 bits", "32 bits"]
 +++
 
 ### When to use 64-bit?

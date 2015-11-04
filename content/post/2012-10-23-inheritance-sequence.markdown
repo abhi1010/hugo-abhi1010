@@ -4,6 +4,8 @@ title = "Multiple Inheritance"
 type = "post"
 tags = ["c++"]
 categories = ["code"]
+description = "Multiple inheritance explained"
+keywords = ["inheritance", "multiple inheritance"]
 +++
 
 What is the output to the following code?

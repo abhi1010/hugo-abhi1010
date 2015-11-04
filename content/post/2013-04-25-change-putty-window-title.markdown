@@ -4,6 +4,8 @@ title = "Change Putty Window Title"
 type = "post"
 tags = ["bash", "putty"]
 categories = ["code", "tips"]
+description = "How to change putty window title"
+keywords = ["putty", "window title", "PS1"]
 +++
 
 How to modify the Putty window title to a specific string?

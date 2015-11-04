@@ -5,6 +5,8 @@ type = "post"
 tags = ["sorting", "algo", "c++"]
 categories = ["code"]
 series = ["Algorithm"]
+description = "Comparison of all sorting implementations"
+keywords = ["algorithm", "sorting comparison"]
 +++
 
 

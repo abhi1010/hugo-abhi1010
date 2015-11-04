@@ -4,6 +4,8 @@ title = "Partition Linked List around a Value X"
 type = "post"
 tags = ["c++", "algo", "linked list"]
 categories = ["code"]
+description = "How to partition linked list around a value"
+keywords = ["linked list", "partition"]
 +++
 
 How do you partition a list around a value x, such that all nodes less than x come before all nodes greater than or equal to x?

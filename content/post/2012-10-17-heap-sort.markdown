@@ -5,6 +5,8 @@ type = "post"
 tags = ["sorting", "algo", "c++"]
 categories = ["code"]
 series = ["Algorithm"]
+description = "Heap Sort Implementation"
+keywords = ["heap sort", "algorithm"]
 +++
 
 Heap Sort algo has the following properties:

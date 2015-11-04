@@ -4,6 +4,8 @@ title = "Use of yield statement"
 type = "post"
 tags = ["c-sharp"]
 categories = ["code"]
+description = "How to use yield in C#"
+keywords = ["yield", "code", "c#"]
 +++
 
 It might be a little late for this to appear but I have no qualms in accepting that I have finally embraced yield statement and see it as an excellent way of writing codes.

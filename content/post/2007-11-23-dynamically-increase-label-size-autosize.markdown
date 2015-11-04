@@ -4,6 +4,8 @@ title = "Dynamically increase Label size [AutoSize]"
 type = "post"
 tags = ["c-sharp"]
 categories = ["code"]
+description = "How to dynamically increase label size in asp.net"
+keywords = ["asp.net", "C#", "windows forms"]
 +++
 
 Recently I had to work on a windows form where the Labels are added dynamically onto the form. Some of you may think that setting AutoSize to true would fix the problem but it works only when you already have added that Label control onto the form, not when you are adding it dynamically.

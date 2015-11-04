@@ -4,6 +4,8 @@ title = "StringBuilder vs String joins"
 type = "post"
 tags = ["c-sharp"]
 categories = ["code"]
+description = "Stringbuilder vs String joins"
+keywords = ["Stringbuilder", "strings", "C#", ".net"]
 +++
 
 

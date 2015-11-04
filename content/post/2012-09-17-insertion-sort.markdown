@@ -5,6 +5,8 @@ type = "post"
 tags = ["sorting", "algo", "c++"]
 categories = ["code"]
 series = ["Algorithm"]
+description = "Insertion Sort Implementation"
+keywords = ["insertion sort", "algorithm"]
 +++
 
 Insertion Sort has the following properties:

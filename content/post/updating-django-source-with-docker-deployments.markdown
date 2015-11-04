@@ -3,6 +3,8 @@ categories = ["code", "continuous delivery"]
 tags = ["docker", "django", "uwsgi", "git", "supervisord"]
 date = "2015-09-04T00:11:51+08:00"
 title = "Updating Django Source with Docker Deployments"
+description = "How to update django source code on docker"
+keywords = ["elastic beanstalk", "docker", "django", "git", "uwsgi", "supervisord"]
 +++
 
 While deploying docker multiple times, you may not want to copy over your `Django` source code every time you do a deployment.

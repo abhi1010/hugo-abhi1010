@@ -4,13 +4,14 @@ title = "Book Review: Head First Design Patterns"
 type = "post"
 tags = ["java"]
 categories = ["code", "design patterns"]
+description = "Head First Design Patterns review"
+keywords = ["design patterns", "head first", "book review"]
 +++
 
 What an amazing book this is! It is a must read for any developer who wants to develop long term codes/projects.
 
  
 
- 
 
 The book looks at mostly the more important design patterns. The distinctive feature that stands out in this book is how it manages to make each pattern stand out against each other. It gives comparison between similar-looking patterns where necessary. It make the patterns "debate" against each other, get the birds-eye-view from "patterns guru and grasshopper discussion", UML like "class diagrams with notes" to show how everything is gelling together.
 

@@ -3,6 +3,8 @@ categories = ['code']
 tags = ['git']
 date = "2015-09-10T00:18:24+08:00"
 title = "Using External Tools with Git Diff"
+description = "How to use external tools with git diff"
+keywords = ["git", "git diff", "external tools"]
 +++
 
 If you want to view what has changed since one commit to another, it is quite easy to view the diff.

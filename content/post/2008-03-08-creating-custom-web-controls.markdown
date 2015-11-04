@@ -4,6 +4,8 @@ title = "Creating Custom Web Controls"
 type = "post"
 tags = ["c-sharp"]
 categories = ["code"]
+description = "How to create custom web controls"
+keywords = ["custom web controls", "asp.net", "C#"]
 +++
 How do you extend a control? Let's figure it out.
 

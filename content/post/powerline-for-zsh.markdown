@@ -3,6 +3,8 @@ categories = ["code"]
 tags = ["zsh", "bash"]
 date = "2015-09-28T08:46:09+08:00"
 title = "Powerline for zsh"
+description = "How to use powerline theme on zsh"
+keywords = ["powerline", "zsh", "bash"]
 +++
 
 {{< figure src="/images/powerline-for-zsh.png" caption="Powerline" >}}

@@ -4,6 +4,8 @@ title = "Tag your namespaces"
 type = "post"
 tags = ["c-sharp"]
 categories = ["code"]
+description = "How to tag your namespaces in C#"
+keywords = ["tagging namespaces", "C#", ".NET"]
 +++
 
 Recently discovered a nifty little feature on .Net and though of sharing it.

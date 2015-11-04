@@ -4,6 +4,8 @@ title = "CVS Cheat Sheet"
 type = "post"
 tags = ["bash", "cvs"]
 categories = ["code", "tips"]
+description = "CVS cheat sheet"
+keywords = ["cvs", "cvs cheat sheet"]
 +++
 
 

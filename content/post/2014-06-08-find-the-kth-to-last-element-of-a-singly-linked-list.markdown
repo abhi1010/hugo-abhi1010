@@ -4,6 +4,8 @@ title = "Find the Kth to Last Element of a Singly Linked List"
 type = "post"
 tags = ["c++", "algo", "linked list"]
 categories = ["code"]
+description = "How to find the Kth to Last Element of a Singly Linked List"
+keywords = ["Singly Linked List", "Linked List", "kth element"]
 +++
 
 It is possible to a recursive solutions but I will use a simple runner logic. Recursive solutions are usually less optimal.

@@ -4,6 +4,8 @@ title = "Oracle SQL Queries"
 type = "post"
 tags = ["sql"]
 categories = ["code", "database"]
+description = "How to view all table in oracle sql server"
+keywords = ["oracle sql", "sql queries"]
 +++
 
 Recently I found myself in a situation where I had to view all the tables in the Oracle Server.

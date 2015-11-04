@@ -4,6 +4,8 @@ title = "Blogs I like"
 type = "post"
 tags = ["c-sharp", "sql"]
 categories = ["code"]
+description = "Blogs I like"
+keywords = ["blogs", "favorites", "best blogs", "blog list"]
 +++
 
 Two blogs i really like and follow many a times are:

@@ -4,6 +4,8 @@ title = "Ideas for Shared Memory in Linux"
 type = "post"
 tags = ["c-sharp"]
 categories = ["code"]
+description = "Shared memory in linux"
+keywords = ["shared memory"]
 +++
 
 I have been doing extensive research today regarding shared memory in linux before I embark on a new project in which shaving time off process communication latency is extremely important. I found some very interesting links as well. Let’s break them down:

@@ -4,6 +4,8 @@ title = "Visual Studio 2008 crashes while adding items"
 type = "post"
 tags = ["c-sharp", "visual studio"]
 categories = ["code"]
+description = "How to fix visual studio crashes when adding items"
+keywords = ["visual studio crash", "C#", ".NET"]
 +++
 
 

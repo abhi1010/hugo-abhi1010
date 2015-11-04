@@ -4,6 +4,8 @@ title = "Deleting a Node from Singly Linked List"
 type = "post"
 tags = ["linked list", "c++", "algo"]
 categories = ["code"]
+description = "How to delete a node from singly linked list"
+keywords = ["linked list", "node", "delete"]
 +++
 
 Deleting a Node from Singly Linked List is rather straight forward.
