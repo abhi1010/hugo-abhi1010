@@ -6,7 +6,6 @@ tags = ["python", "aws", "lambda", "github", "git"]
 categories = ["code", "continuous delivery"]
 description = "How to execute an aws lambda command on git push"
 keywords = ["aws lambda", "python", "aws", "lambda", "github", "git", "api gateway", "git push"]
-draft = true
 +++
 
 I recently needed to call a command whenever there was a push on my Github repo.
@@ -138,11 +137,11 @@ So let's do that.
 
 Now this API can be tested easily by just calling upon this URL:
 
-  https://XXXXXXXXXXXX.execute-api.ap-northeast-1.amazonaws.com/test/mirror/
+  https://XXXXXXXXXXXX.execute-api.ap-northeast-1.amazonaws.com/test/resource_1/
 
 {{< figure src="/images/lambda_basics_api_5.png" caption="Check your Response from Lambda using GET" >}}
 
-
+If you wanted to test from a URL, it would be actually going to this URL itself from the browser.
 
 # Misc
 
