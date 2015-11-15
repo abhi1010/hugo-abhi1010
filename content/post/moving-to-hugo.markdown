@@ -24,7 +24,7 @@ I hated the look of the website when it seemed that I was wasting a lot of white
  
  I stopped blogging for a while for such reasons. Eventually I heard about `Jekyll` and was again motivated to try it. 
  However, since I had also moved from `C++` to `Python` I figured there's bound to be something that's gonna be related to `Python` 
- so that I can quickly jump in and navigate my way into the core base should there be a need (and who doesn't find reason to do that?).
+ so that I can quickly jump in and navigate my way into the code base should there be a need (and who doesn't find reason to do that?).
  `Jekyll` was `ruby` based and that was holding me back a bit.
  During my research I found out three options:
   
@@ -68,8 +68,8 @@ I found this link on wordpress to export all of the contents out into xml file.
 
 The next task was to convert the xml file into markdown files so that `hugo` could use them. However, I had already converted
 some of my files earlier while working on `pelican`. Once I started using them I realized that my contents were not looking as expecting when I was iterating through 
- various themes. Sometimes things okay and other times not. I figured it *must be something to do with how markdown was laid down from the xml file* because 
-  the tags and categories were missing perhaps. I double checked the wordpress xml file but it contained the tags and categories that I was looking for.
+ various themes. Sometimes things looked okay and other times not. I figured it *must be something to do with how markdown was laid down from the xml file* because 
+  the tags and categories were missing. I double checked the wordpress xml file but it contained the tags and categories that I was looking for.
   It was time to start digging again. 
 
 I came across [exitwp](https://github.com/thomasf/exitwp) which needed a bit of setup, but I was willing to give it a try.
