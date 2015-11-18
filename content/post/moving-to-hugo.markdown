@@ -1,7 +1,7 @@
 +++
 categories = ["code"]
 tags = ["hugo"]
-date = "2015-09-14T11:14:38+08:00"
+date = "2015-09-15T11:14:38+08:00"
 title = "Moving To Hugo"
 description = "How to move to hugo and automate deployment"
 keywords = ["hugo", "gohugo", "automate", "deployment"]
@@ -295,8 +295,8 @@ If we have to commit to two repo - for markdown as well html pages, I feel like 
 
 I did some work with `shippable` and started automatically creating the html pages through it.
  
-I have created another article about it.
-Please [read it]({{< ref "post/elastic-beanstalk-deployment-automation.markdown" >}}) for further details.
+I have created another article about it while taking Elastic Beanstalk as the subject. The same applies for `hugo` though. You can find it here:
+**[Elastic Beanstalk Deployment Automation]({{< ref "post/elastic-beanstalk-deployment-automation.markdown" >}})**
  
 Once you have done it, all you need to do is:
 
