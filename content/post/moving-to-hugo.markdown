@@ -296,6 +296,7 @@ If we have to commit to two repo - for markdown as well html pages, I feel like 
 I did some work with `shippable` and started automatically creating the html pages through it.
  
 I have created another article about it while taking Elastic Beanstalk as the subject. The same applies for `hugo` though. You can find it here:
+
 **[Elastic Beanstalk Deployment Automation]({{< ref "post/elastic-beanstalk-deployment-automation.markdown" >}})**
  
 Once you have done it, all you need to do is:
