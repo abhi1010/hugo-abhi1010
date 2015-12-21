@@ -1,7 +1,7 @@
 +++ date = "2015-12-20 07:49:00+00:00" title = "Color coding your processes" type = "post" tags = ["bash"] categories = ["code"] description = "HOw to make your variables stand out from values in bash for processes" keywords = ["bash", "process", "linux terminal", "terminal", "process colors"] draft = "true"+++
 
 
-[ dev ]@csqdev-web01 ~ $ ps -ef | egrep uwsgi | egrep touch | head -1 | awk 'BEGIN {RS="--"; ORS="\n\t--"} {print $0}' | awk '{printf "\033[40;38;5;82m  %s \033[38;5;198m %s \033[0m \n", $1, $2 }'
+[ dev ]@csqdev-web01 ~ $ ps -ef | egrep uwsgi | egrep touch | head -1 | awk 'BEGIN {RS="--"; FS="="; ORS="\n\t--"} {printf "\033[40;38;5;82m  %s \033[38;5;198m %s \033[0m \n", $1, $2 }'
   grass-py  10332  
   --daemonize  /var/log/uwsgi/uwsgi-risk.log  
   --log-prefix    
