@@ -1,7 +1,7 @@
 +++ date = "2015-12-20 07:49:00+00:00" title = "Color coding your processes" type = "post" tags = ["bash"] categories = ["code"] description = "HOw to make your variables stand out from values in bash for processes" keywords = ["bash", "process", "linux terminal", "terminal", "process colors"] draft = "true"+++
 
-
-
+# The following works very well
+ps -ef | egrep evepnl | awk 'BEGIN {RS="--"; FS="="; ORS="\n\t--"} {printf "\033[40;38;5;82m  %50s \033[38;5;198m %s \033[0m \n", $1, $2 }'
 
 ps -ef | egrep boxcoll | head -1  | awk 'BEGIN {RS="--"}{print $0}' | awk '{printf "\033[40;38;5;82m  %-30s  \033[38;5;198m %s \033[0m \n", $1, $2 }'
 
