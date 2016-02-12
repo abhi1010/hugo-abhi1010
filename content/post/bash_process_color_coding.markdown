@@ -12,7 +12,11 @@ ps -ef | egrep boxcoll | head -1  | awk 'BEGIN {RS="--"}{print $0}' | awk '{prin
 ee \
     | gawk 'BEGIN {FS="="; RS=" --| -"}{print $0}' \
     | sed -e 's/\(-\+[a-z-]\+\)=/\1 /g' \
-    | awk '{printf "\033[40;38;5;82m  %-30s  \033[38;5;198m %s \033[0m \n", $1, $2 }'
+    | awk 'BEGIN    {printf "-----------------\n" ; }
+            {
+                if (NF > 2) printf "\n\033[41;5;1m%s\033[0m\n", $NF ;
+                printf "\033[40;38;5;82m  %30s  \033[38;5;198m %s \033[0m \n", $1, $2
+            }'
 
 ```
 
