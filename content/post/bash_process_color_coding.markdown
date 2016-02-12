@@ -6,6 +6,15 @@ ps -ef | egrep evepnl | awk 'BEGIN {RS="--"; FS="="; ORS="\n\t--"} {printf "\033
 ps -ef | egrep boxcoll | head -1  | awk 'BEGIN {RS="--"}{print $0}' | awk '{printf "\033[40;38;5;82m  %-30s  \033[38;5;198m %s \033[0m \n", $1, $2 }'
 
 
+# Forget about the rest, this works the best so far, due to sed in it
+
+```
+ee \
+    | gawk 'BEGIN {FS="="; RS=" --| -"}{print $0}' \
+    | sed -e 's/\(-\+[a-z-]\+\)=/\1 /g' \
+    | awk '{printf "\033[40;38;5;82m  %-30s  \033[38;5;198m %s \033[0m \n", $1, $2 }'
+
+```
 
 
 
