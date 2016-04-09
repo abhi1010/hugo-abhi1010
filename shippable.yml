@@ -1,5 +1,11 @@
 language: python
 
+build:
+  pre_ci_boot:
+    image_name: manishas/myImage
+    image_tag: latest
+    pull: true
+
 install:
   - pip install Pygments 
 
