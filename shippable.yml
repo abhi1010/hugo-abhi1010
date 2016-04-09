@@ -2,14 +2,12 @@ language: python
 
 build:
   pre_ci_boot:
-    image_name: tamtech/hugo_014
+    image_name: abhi1010/hugo_015
     image_tag: latest
     pull: true
 
-install:
-  - pip install Pygments 
-
 before_script:
+  - pip install Pygments
   - git config --global push.default matching
   - rm -rf abhi1010.github.io && rm -rf themes/hyde-a && mkdir -p themes
   - git config --global user.email "abhi.pandey@gmail.com"
