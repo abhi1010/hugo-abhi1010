@@ -2,7 +2,7 @@ language: python
 
 build:
   pre_ci_boot:
-    image_name: manishas/myImage
+    image_name: tamtech/base_docker
     image_tag: latest
     pull: true
 
