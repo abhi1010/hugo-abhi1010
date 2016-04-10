@@ -7,7 +7,6 @@ build:
     pull: true
 
 before_script:
-  - pip install Pygments
   - git config --global push.default matching
   - rm -rf abhi1010.github.io && rm -rf themes/hyde-a && mkdir -p themes
   - git config --global user.email "abhi.pandey@gmail.com"
