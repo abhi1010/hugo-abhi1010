@@ -6,6 +6,7 @@ layoutdir = "layouts"
 publishdir = "public"
 disqusShortname = "abhi1010"
 comments = "true"
+PygmentsCodeFences = true
 
 
 # pygmentsstyle = "manni"
