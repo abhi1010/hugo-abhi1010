@@ -54,8 +54,23 @@ You can copy out the files using the following commands:
 ```bash
 id=$(sudo docker create <image_name>)
 sudo docker cp $id:/ws/protoc-3.2 ./
-sudo docker cp $id:/ws/protobuf-3.0.0-beta-3.2/python/dist/*.tar ./
+sudo docker cp $id:/ws/protobuf-3.0.0-beta-3.2/python/dist/*.gz ./
 ```
+
+In case you get an error like the following, _remove_ `*.gz` from the cp command:
+
+    zsh: no matches found: e7c8a9102e1cd07b4c471c331bc4deba2222278eb22be1e79ecaa14e914ed654:/ws/protobuf-3.0.0-beta-3.2/python/dist/*.gz
+    
+Your second cp command then becomes:
+
+    sudo docker cp $id:/ws/protobuf-3.0.0-beta-3.2/python/dist/ ./
+
+Once done, you can remove the created container with the following command:
+
+```bash
+sudo docker rm -v $id
+```
+
 
 Just remember to change the rights as the files will belong to `root` by default.
 You can do that with the following commands:
