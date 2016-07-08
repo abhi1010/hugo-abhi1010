@@ -6,6 +6,11 @@ build:
     image_tag: latest
     pull: true
 
+# include only master branch for deployments
+branches:
+  only:
+    - master
+
 before_script:
   - git config --global push.default matching
   - rm -rf abhi1010.github.io && rm -rf themes/hyde-a && mkdir -p themes
