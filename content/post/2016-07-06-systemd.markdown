@@ -1,0 +1,112 @@
++++
+categories = ["code", "continuous delivery", "tips"]
+tags = ["linux", "bash"]
+date = "2016-07-07T23:26:44+08:00"
+description = "Systemd tutorial along with timer usage"
+keywords = ["systemd tutorial", "systemd", "systemd.service", "systemd.timer", "systemd.unit", "systemd service", "systemd timer", "systemd unit"]
+title = "Systemd tutorial"
+
++++
+
+
+`Systemd` usually requires two files:
+
+1. service file
+2. timer file
+
+## Service files
+
+Here you provide the details you'd use to 
+
+- Start/stop a service
+- Define the type of service
+  * Can be _simple_, _forking_, _oneshot_, _dbus_, _notify_ or _idle_
+- How to kill the service
+- Ability to restart
+- Path for starting up
+- Timeout for the service startup or shutdown
+
+Service is usually made up of 3 sections:
+
+1. Unit
+2. Service
+3. Install
+  - Usually prefer `multi-user.target` for your installation
+
+One example is as follows:
+
+```
+[Unit]
+Description=Foo
+
+[Service]
+ExecStart=/usr/sbin/foo-daemon
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+Here's what your regular `Service` section would look like:
+
+```
+User=<YOUR_LINUX_ACCOUNT>
+Group=<YOUR_LINUX_GROUP>
+WorkingDirectory=<PROJECT_FOLDER>
+Type=forking
+KillMode=process
+Restart=always
+ExecStart=<COMMAND_TO_START>
+ExecStop=<COMMAND_TO_STOP>
+```
+
+## Timers
+
+Timer files contain information about a timer controlled and 
+supervised by systemd, for timer-based activation.
+This is possibly a better replacement for cron jobs.
+However, the changes are a bit different. 
+
+To set up a timer, you need the following options:
+
+- _OnActiveSec_
+- _OnBootSec_
+- _OnStartupSec_
+- _OnUnitActiveSec_
+- _OnUnitInactiveSec_
+
+They all help you set up your timers relative to different starting points.
+
+Some other options you could use are:
+
+- _OnCalendar_
+  * This is your friend if you are looking for cron job replacement
+  Please check the references below to look for some samples on how to set up
+  your cron jobs in the correct format. It is not exactly same as cron job styles
+- _AccuracySec_
+  * Based on the timer, how close to the actual time should this timer wake up
+  * Use the value of 1us to be the smallest and most accurate
+- _Persistent_
+  * Maybe you want to save the information about the timestamps whenever
+  the service is shutting down. In that case, the information will be saved 
+  on the hard disk. It will be used along with boot and active _sec_ information.
+
+Here's one simple sample for setting a timer
+
+```
+[Timer]
+AccuracySec=1us
+Persistent=false
+OnBootSec=80
+OnCalendar=*:0/20
+Unit=myjob.service
+
+[Install]
+WantedBy=timers.target
+```
+
+
+## Some references:
+
+https://wiki.archlinux.org/index.php/Systemd/Timers
+https://www.certdepot.net/rhel7-use-systemd-timers/
