@@ -4,9 +4,6 @@ jobs:
   build:
     docker:
       - image: abhi1010/hugo_015:latest
-    branches:
-      only:
-        - master
     steps:
       - checkout
 
