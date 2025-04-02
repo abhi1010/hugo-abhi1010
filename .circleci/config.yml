@@ -1,0 +1,70 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: abhi1010/hugo_015:latest
+    branches:
+      only:
+        - master
+    steps:
+      - checkout
+
+      - run:
+          name: Setup Git Configuration
+          command: |
+            git config --global push.default matching
+            git config --global user.email "abhi.pandey@gmail.com"
+            git config --global user.name "abhi1010"
+
+      - run:
+          name: Prepare Repository
+          command: |
+            rm -rf abhi1010.github.io && rm -rf themes/hyde-a && mkdir -p themes
+            git config --get remote.origin.url
+            git remote set-url origin git@github.com:abhi1010/abhi1010.github.io.git
+            git clone git@github.com:abhi1010/abhi1010.github.io.git
+            cd themes
+            git clone git@github.com:abhi1010/hyde-a.git
+            tail hyde-a/static/css/custom-additions.css
+            cd ../
+            if [[ -f static ]]; then echo 'link exists already'; else ln -s themes/hyde-a/static; fi
+
+      - run:
+          name: Build Hugo Site
+          command: |
+            hugo -d abhi1010.github.io/
+
+      - run:
+          name: Deploy to GitHub Pages
+          command: |
+            echo `pwd`
+            export NOW_HOUR=$(date +%d-%b-%H_%M)
+            pwd && ls
+            git config --get remote.origin.url
+            git remote set-url origin git@github.com:abhi1010/abhi1010.github.io.git
+            cd abhi1010.github.io
+            pwd
+            git status -s
+            echo -e "a\n*\nq\n"|git add -i
+            git commit -vam "Automated build from CircleCI - $NOW_HOUR"
+            git remote show origin
+            git push -v
+
+      - save_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - .
+
+notify:
+  webhooks:
+    - url: https://example.com/hooks/circle
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
