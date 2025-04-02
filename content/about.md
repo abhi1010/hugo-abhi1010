@@ -8,7 +8,7 @@ title = "About"
 
 Welcome to Coders Digest!
 
-I am **_Abhishek_**. I have been based in Singapore since 13 years, working in the financial industry for over 8 years now.
+I am **_Abhishek_**. I have been based in Singapore since 18 years, working in the financial industry for over 15 years now.
 
 In my current blog I am putting up some articles that would be of interest to other developers. The blog is pretty widespread with topics ranging from Flash to C++. My idea is to be as concise as possible while giving you a gist of the topic that I am covering. Naturally a lot of it is going to be code based so I spent some time recently putting up all my code on Github. Code snippets have been moved to gist.github.com. I have also modified some of my posts putting up direct links for easier access so you will definitely find it whenever possible. Please feel free to correct me on anything. You can start here:
 
