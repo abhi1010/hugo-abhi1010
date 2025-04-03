@@ -2,6 +2,7 @@
 date = "2007-11-23 07:52:00+00:00"
 title = "Dynamically increase Label size [AutoSize]"
 type = "post"
+draft = false
 tags = ["c-sharp"]
 categories = ["code"]
 description = "How to dynamically increase label size in asp.net"

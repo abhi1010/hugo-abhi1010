@@ -2,6 +2,7 @@
 date = "2008-03-08 13:55:00+00:00"
 title = "StringBuilder vs String joins"
 type = "post"
+draft = false
 tags = ["c-sharp"]
 categories = ["code"]
 description = "Stringbuilder vs String joins"
@@ -13,7 +14,7 @@ For those who do not want to waste their time, here's the gist for this whole ar
 _StringBuilder performs better but you should try to use it when there's lot of concatenation involved (normally more than 7 joins - start thinking about StringBuilder._
 
 Let's move on for the lesser mortals. There has been a lot of debate about using StringBuilder instead of adding string like
-    
+
     <span style="color:#606060;">   1:</span> strVariable += <span style="color:#006080;">" Add this string to my variable string"</span>;
 
 What's the darn difference?

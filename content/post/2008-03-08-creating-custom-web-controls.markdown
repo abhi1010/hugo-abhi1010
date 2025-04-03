@@ -2,6 +2,7 @@
 date = "2008-03-08 22:30:00+00:00"
 title = "Creating Custom Web Controls"
 type = "post"
+draft = false
 tags = ["c-sharp"]
 categories = ["code"]
 description = "How to create custom web controls"
@@ -14,28 +15,28 @@ How do you extend a control? Let's figure it out.
 
 Because some functionality may not exist exactly as you may need it. For example, let's take up ImageButton control example. It is a great control but it falls short when it comes to real world scenario. Mostly websites do a hover image clickable button where the text or background color of the button changes once you hover your mouse over it.
 
- 
+
 
 **How to Extend?**
 
- 
+
 
 _I assume that you use C# code but there is not going to be any difference even if you wanted to do in VB.Net. _
 
- 
+
 
 Create a project for creating custom web control library. It automatically includes a C# class that says something like
 
- 
 
-  
 
-    
-    
+
+
+
+
     <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">class</span> WebCustomControl1 : WebControl
 
 
-  
+
 
 
 
@@ -49,12 +50,12 @@ Now ask yourself, what do you want to extend? A GridView? Replace WebControl wit
 
 
 
-    
-    
+
+
     <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">class</span> HoverImageButton : ImageButton
 
 
-  
+
 
 
 
@@ -105,7 +106,7 @@ This is a very simple process. You have the javascript file and you know for sur
 
 
 
-This is how you do that. 
+This is how you do that.
 
 {{< gist bfb075b6787d2616fde6 >}}
 
@@ -135,7 +136,7 @@ What is Attributes property for anyway? Well, it adds any extra "property" or "s
 
 
 
-Let's see how that's done. 
+Let's see how that's done.
 
 {{< gist d0b66ef7b0f076e88042 >}}
 
@@ -168,15 +169,15 @@ For the control library to properly include the js file, you have to add the js 
 
 
 
-  
 
 
-    
-    
+
+
+
     [assembly: WebResource(<span style="color:#006080;">"ExtendedControls.HoverImageButtonJS.js"</span>, <span style="color:#006080;">"text/javascript"</span>)]
 
 
-  
+
 
 
 
@@ -198,12 +199,12 @@ That's all. A few simple steps and your control is ready to be tested. Still, le
 
 
 
-  
-  * Add this control's library to any web project. 
+
+  * Add this control's library to any web project.
 
 
-  
-  * Register the dll on web.config. This makes the control available automatically on all the pages. 
+
+  * Register the dll on web.config. This makes the control available automatically on all the pages.
 
 
 
@@ -216,8 +217,8 @@ That's all. A few simple steps and your control is ready to be tested. Still, le
 
 
 
-  
-  * Go to the design view of any page. Open up the Toolbox pane and you will automatically see the name appear "HoverImageButton". Double click and you are ready to go!! 
+
+  * Go to the design view of any page. Open up the Toolbox pane and you will automatically see the name appear "HoverImageButton". Double click and you are ready to go!!
 
 
 
@@ -236,38 +237,38 @@ Just take care of few pointers and you should be fine. Here they go:
 
 
 
-  
+
   * The JScript file that you have added sometimes doesn't get linked properly to the control. Right click on the js file and check it's properties. It's compile action should be "Embed Content" rather than anything else. That way everytime you compile this control, this js file gets "embedded" into the control's library.
 
 
-  
-  * Take care of the naming convention for the js file. 
+
+  * Take care of the naming convention for the js file.
 
 
-  
-    
+
+
     * If your control's namespace is ExtendedControls, then while "Registering" it in the control's class you should give the JS file's name as "ExtendedControls.CustomControl_JS.js" where "CustomControl_JS.js" is the name of the javascript file. Basically, another shortcut to learn it is whatever is the name of the project/assembly that you are creating, you have to append that name before the file name. **Follow this logic strictly, otherwise you will be left high and dry. **
 
-  
 
-  
+
+
   * You should also remember to register this name inside AssemblyInfo.cs class ("ExtendedControls.CustomControl_JS.js" as per our example here).
 
 
-  
+
   * If you want Visual Studio Design support then remember to add the attributes that define where can you see the custom properties of this control in the "Properties" pane.
 
 
-  
+
   * Whenever you are putting your code files inside some folder, try to keep the JS files in the root folder.
 
 
-  
-    
-    * When I tried putting them inside the folder it did not work, i took them out to the root folder and it worked instantly. I have not tried changing the JS file names but I am sure you can figure out some solution. 
+
+
+    * When I tried putting them inside the folder it did not work, i took them out to the root folder and it worked instantly. I have not tried changing the JS file names but I am sure you can figure out some solution.
 
 
 
-**Here's all the code in case somebody needs it:** 
+**Here's all the code in case somebody needs it:**
 
 {{< gist 135e9bbf44f3d9a53cb8 >}}

@@ -2,6 +2,7 @@
 date = "2008-03-03 04:58:00+00:00"
 title = "Talk to my... Flash?"
 type = "post"
+draft = false
 tags = ["flash"]
 categories = ["database", "tips"]
 description = "How to let flash communicate with the computer's desktop or web browser"
