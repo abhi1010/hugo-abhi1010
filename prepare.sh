@@ -8,14 +8,16 @@
 # It will also set up the git remote for the custom additions
 
 rm -rf abhi1010.github.io
-rm -rf themes/hyde-a
+rm -rf themes/hugo-theme-m10c
 mkdir -p themes
 git config --get remote.origin.url
-# git remote set-url origin git@github.com:abhi1010/abhi1010.github.io.git
+
 git clone git@github.com:abhi1010/abhi1010.github.io.git
 cd themes
-git clone git@github.com:abhi1010/hyde-a.git
-tail hyde-a/static/css/custom-additions.css
+git clone git@github.com:abhi1010/hugo-theme-m10c.git
+
+
 cd ../
-if [[ -f static ]]; then echo 'link exists already'; else ln -s themes/hyde-a/static; fi
+if [[ -f static ]]; then echo 'link exists already'; else ln -s themes/hugo-theme-m10c/static; fi
+
 

@@ -1,3 +1,3 @@
-#!/usr/env/bin bash
+#!/usr/bin/env bash
 
-hugo -d abhi1010.github.io/
+hugo build --destination abhi1010.github.io/

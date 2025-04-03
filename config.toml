@@ -7,8 +7,7 @@ publishdir = "public"
 disqusShortname = "abhi1010"
 comments = "true"
 PygmentsCodeFences = true
-
-
+ignoreLogs = ['warning-goldmark-raw-html']
 # pygmentsstyle = "manni"
 # pygmentsstyle = "igor"
 # pygmentsstyle = "xcode"
@@ -33,79 +32,102 @@ PygmentsCodeFences = true
 # pygmentsstyle = "default"
 # pygmentsstyle = "fruity"
 
-pygmentsstyle = "tango"
+# pygmentsstyle = "tango"
+
+pygmentsstyle = "xcode"
 pygmentsuseclasses = false
 
-theme = "hyde-a"
 
-[author]
-    name = "Abhishek Pandey"
+# theme = "triple-hyde"
+# theme = "hextra"
+theme = "hugo-theme-m10c"
+
+
+# [author]
+# name = "Abhishek Pandey"
 
 [permalinks]
-    # Optional. Change the permalink format for the 'post' content type.
-    # post = "/blog/:title/"
-    post = "/:year/:month/:title/"
+# Optional. Change the permalink format for the 'post' content type.
+# post = "/blog/:title/"
+post = "/:year/:month/:title/"
 
 [taxonomies]
-    # Optional. Use if you want tags and lists.
-    category = "categories"
-    tag = "tags"
+# Optional. Use if you want tags and lists.
+category = "categories"
+tag = "tags"
 
 
+[pagination]
+pagerSize = 20
+
+
+[[params.social]]
+icon = "brand-github"
+name = "My Github"
+url = "https://github.com/abhi1010"
+
+[[params.social]]
+icon = "brand-linkedin"
+name = "My LinkedIn"
+url = "https://www.linkedin.com/in/apandey10/"
 
 #
 # All parameters below here are optional and can be mixed and matched.
 #
+
+# [[params.theme]]
+# # light | dark | system
+# default = "system"
+# displayToggle = true
+
 [params]
-    # If false display full article contents in blog index.
-    # Otherwise show description and 'read on' link to individual blog post page.
-    # Default (if omitted) is true.
-    truncate = false
+author = "Abhishek Pandey"
+# If false display full article contents in blog index.
+# Otherwise show description and 'read on' link to individual blog post page.
+# Default (if omitted) is true.+
+avatar = "space-2.jpg"
 
-    # Used when a given page doesn't set its own.
-    defaultDescription = "C++/python/bash code; How to automate and deploy your applications"
-    defaultKeywords = "aws,deploy,elastic beanstalk,beanstalk,python,c++,continuous delivery,tips,code,docker,bash,linux"
+truncate = true
+description = "Abhishek Pandey"
+# Used when a given page doesn't set its own.
+defaultDescription = "C++/python/bash code; How to automate and deploy your applications"
+defaultKeywords = "aws,deploy,elastic beanstalk,beanstalk,python,c++,continuous delivery,tips,code,docker,bash,linux"
 
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
-    theme = "theme-base-aa"
+# Changes sidebar background and link/accent colours.
+# See below for more colour options.
+# This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
 
-    # Select a syntax highlight.
-    # Check the static/css/highlight directory for options.
-    # highlight = "sunburst"
-    # highlight = "monokai"
-
-
-    # Displays under the author name in the sidebar, keep it short.
-    # You can use markdown here.
-    tagline = "Coder's Digest"
+# Select a syntax highlight.
+# Check the static/css/highlight directory for options.
+# highlight = "sunburst"
+# highlight = "monokai"
 
 
-    # Text for the top menu link, which goes the root URL for the site.
-    # Default (if omitted) is "Blog".
-    home = "Home"
-    disqus = "abhi1010"
-    disqusShortname = "abhi1010"
+# Displays under the author name in the sidebar, keep it short.
+# You can use markdown here.
+tagline = "Coder's Digest"
 
-    # Google analytics user id for tracking
-    googleAnalytics = "UA-68135443-1"
 
+# Text for the top menu link, which goes the root URL for the site.
+# Default (if omitted) is "Blog".
+home = "Home"
+disqus = "abhi1010"
+disqusShortname = "abhi1010"
+
+# Google analytics user id for tracking
+googleAnalytics = "UA-68135443-1"
 
 
 [[menu.main]]
-    name = "Posts"
-    pre = "<i class='fa fa-heart'></i>"
-    weight = -110
-    identifier = "posts"
-    url = "/post/"
+name = "Posts"
+weight = -110
+identifier = "posts"
+url = "/post/"
 [[menu.main]]
-    name = "Tags"
-    pre = "<i class='fa fa-road'></i>"
-    weight = -109
-    url = "/tags/"
+name = "Tags"
+weight = -109
+url = "/tags/"
 [[menu.main]]
-    name = "Categories"
-    pre = "<i class='fa fa-road'></i>"
-    weight = -108
-    url = "/categories/"
+name = "Categories"
+weight = -108
+url = "/categories/"
