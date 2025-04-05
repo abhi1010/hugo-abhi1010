@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+
 # This script is used to prepare the environment for the blog
 # It will install the required packages and set up the directory structure
 # It will also clone the required repositories and set up the symlinks
