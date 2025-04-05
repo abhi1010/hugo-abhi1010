@@ -19,5 +19,5 @@ Please note that `PS1` is only valid until you move your folders again. That is 
 Let's have a look at the script needed. Maybe you wanna put them in your .bashrc file.
 
 
-{{< gist 8eed9133ed91cbb42854 >}}
+{{< gist abhi1010 8eed9133ed91cbb42854 >}}
 

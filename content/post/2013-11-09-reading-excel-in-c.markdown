@@ -15,22 +15,22 @@ There were a few things to learn:
 
 
 
-	
+
   * Excel support is not available by default so make sure to add Microsoft.Office.Interop.Excel as a reference
 
-	
+
   * Sometime indexing to reference the Workbooks or Worksheets may not work so try out other values
 
-	
-  * 
 
-	
+  *
+
+
     * I remember this was not a problem with Visual Studio 2010 but something must have happened in Visual Studio 2012
 
 
 
 
-	
+
   * It is also possible to try Workbook names to try and retrieve them
 
 
@@ -38,7 +38,7 @@ Please follow the shortened code to read an Excel file after the break.
 
 <!-- more -->
 
-{{< gist ee13f57720471c8feea2 >}}
+{{< gist abhi1010 ee13f57720471c8feea2 >}}
 
 
 

@@ -12,10 +12,10 @@ Duplicates can be removed in many ways:
 
 
 
-	
+
   * Create a new Linked List containing only unique items
 
-	
+
   * Iterate through the Linked List and keep removing items that are being repeated
 
 
@@ -31,6 +31,6 @@ As usual the [code](https://github.com/abhi1010/Algorithms/blob/master/Algo_code
 
 Here's a small sample as to how to do it:
 
-{{< gist e2b7117c20d0f591896f >}}
+{{< gist abhi1010 e2b7117c20d0f591896f >}}
 
 

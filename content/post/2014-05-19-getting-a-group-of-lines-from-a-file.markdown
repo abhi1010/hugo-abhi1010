@@ -14,19 +14,19 @@ I came up with a script that can run at almost same speeds using `grep/cat/awk`.
 
 
 
-	
+
   * Since `awk` script only toggles one variable it works seamlessly without delaying the actual work
 
-	
+
   * Works on gzip files as well
 
-	
+
   * If you do not want to depend on grep or are unsure how many lines may be between begin and end keyword then replace gunzip with zcat and grep with cat.
 
-	
+
   * Usage: ``group filename printBeginKeyword printUntilKeyword NumOfLines``
 
 
 Let's have a look at the script....
 
-{{< gist 924a5f12f3067ba0b3af >}}
+{{< gist abhi1010 924a5f12f3067ba0b3af >}}

@@ -9,8 +9,8 @@ keywords = ["typename", "C++"]
 +++
 
 What is wrong with the following code?
-  
-{{< gist 0bd5e4d910e4d8a7672e >}}
+
+{{< gist abhi1010 0bd5e4d910e4d8a7672e >}}
 
 The issue is very simple but hard to notice. If you try to compile this, you will get the following errors:
 
@@ -30,13 +30,13 @@ At least it straight away tells you something is wrong with `InnerStruct_Wrapper
 
 
 
-	
+
   * The compiler does not know that mUsingInner in that line is actually a variable of type "OuterStruct<T2>::InnerStruct"
 
-	
+
   * InnerStruct will only be known later when it is being instantiated
 
-	
+
   * Compiler cannot figure out what InnerStruct means here. It could be a type or a member variable
 
 

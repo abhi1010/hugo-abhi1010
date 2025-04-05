@@ -16,10 +16,10 @@ Query | Remarks
 ----- | -------
 Select * from All_Tables | View all the tables in the Oracle Server
 Select * from all_Views | View all the views in the Oracle Server
-DESC table |	View all the columns of a given table. This function is used instead of the previous one mostly, but when this one doesn't work make sure you try the other one - I bet it will work. 
+DESC table |	View all the columns of a given table. This function is used instead of the previous one mostly, but when this one doesn't work make sure you try the other one - I bet it will work.
 
 
 Here's a short code for viewing all the columns of a given table.
 
 
-{{< gist 11365686 >}}
+{{< gist abhi1010 11365686 >}}

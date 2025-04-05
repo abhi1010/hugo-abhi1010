@@ -12,24 +12,24 @@ Deleting a Node from Singly Linked List is rather straight forward.
 
 
 
-	
+
   * You have to know the head first of all
 
-	
+
   * Start by checking the head if that's the one you are looking for
 
-	
+
   * Keep moving forward and checking - always check for null pointers everywhere
 
 
 Before we talk about the code, let's see how Linked List is setup.
 <!-- more -->
 
-{{< gist 33be440bf1012773b7e1 >}}
+{{< gist abhi1010 33be440bf1012773b7e1 >}}
 
 Now, below is the code for it....
 
-{{< gist bf9dbb193b4ff84ba3af >}}
+{{< gist abhi1010 bf9dbb193b4ff84ba3af >}}
 
 
 ### Code

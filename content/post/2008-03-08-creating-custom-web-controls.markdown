@@ -108,7 +108,7 @@ This is a very simple process. You have the javascript file and you know for sur
 
 This is how you do that.
 
-{{< gist bfb075b6787d2616fde6 >}}
+{{< gist abhi1010 bfb075b6787d2616fde6 >}}
 
 
 
@@ -138,7 +138,7 @@ What is Attributes property for anyway? Well, it adds any extra "property" or "s
 
 Let's see how that's done.
 
-{{< gist d0b66ef7b0f076e88042 >}}
+{{< gist abhi1010 d0b66ef7b0f076e88042 >}}
 
 
 
@@ -152,7 +152,7 @@ This is how it is rendered on the client browser:
 
 
 
-{{< gist 6df972bf94b736545419 >}}
+{{< gist abhi1010 6df972bf94b736545419 >}}
 
 
 
@@ -212,7 +212,7 @@ That's all. A few simple steps and your control is ready to be tested. Still, le
 
 
 
-{{< gist 88222d3f94911fbec6f4 >}}
+{{< gist abhi1010 88222d3f94911fbec6f4 >}}
 
 
 
@@ -271,4 +271,4 @@ Just take care of few pointers and you should be fine. Here they go:
 
 **Here's all the code in case somebody needs it:**
 
-{{< gist 135e9bbf44f3d9a53cb8 >}}
+{{< gist abhi1010 135e9bbf44f3d9a53cb8 >}}

@@ -14,20 +14,20 @@ Well, there are some solutions possible. The solution, I came up with, is a bit 
 
 
 
-	
+
   * Two pointers to remember the beginning of the _lower_ and _higher_ series each
 
-	
+
   * One pointer (_current_) to iterate through the Linked List
 
-	
+
   * The list may itself start with higher or lower value compared to the _middleValue_. Thus we need to remember the beginning of the lower series (_lowerSeries_) as this is what we will send back
 
 
 Now that we have this out of the way, let's look at the code:
 
 
-{{< gist 3ada1d15b5bda319a54c >}}
+{{< gist abhi1010 3ada1d15b5bda319a54c >}}
 
 
 # Code

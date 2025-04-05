@@ -21,7 +21,7 @@ The suggested solution here is to use two pointers:
 
 Let's have a look at the code:
 
-{{< gist 43e289a9877fb9293680 >}}
+{{< gist abhi1010 43e289a9877fb9293680 >}}
 
 
 As usual the code is available [here](https://github.com/abhi1010/Algorithms/blob/master/Algo_codes/Node.cpp):

@@ -15,6 +15,6 @@ I have had my fair share of writing small code fragments to read/process/write f
 
 The best way to put the whole process of reading the excel file is to automate reading, iterating and closing of the excel files. It is done by yield statement as I can "yield" the data of the excel through DataReader (OdbcDataReader in my case).
 
-{{< gist 36ecc206fc5f61f4b4bc >}}
+{{< gist abhi1010 36ecc206fc5f61f4b4bc >}}
 
 This way, the function is always common - it is always supposed to read the excel, iterate through it. The data that I need is always in the DataReader so I thought let's just return the data itself! The rest of the function is pretty much normal. The biggest gain is that I don't have to change the structure of the function. The same function can now be used for multiple excel sheets. Have a look at the code.
