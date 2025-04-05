@@ -93,7 +93,7 @@ logger.debug("Processing item 1 of 1000")
 When debugging a specific issue or running important processes:
 
 ```python
-# Creates a timestamped log file like cpr-btc__2025-04-05__14-30.log
+# Creates a timestamped log file like cpr-btc__2019-04-05__14-30.log
 debug_logger = get_logger(should_add_ts=True)
 debug_logger.info("Starting critical data migration")
 ```
@@ -179,11 +179,11 @@ file_handler = TimedRotatingFileHandler(
 The log format used by our function is comprehensive:
 
 ```
-2025-04-05 14:30:22,123, INFO : [app.py:45 -      process_data() ] - Processing started
+2019-04-05 14:30:22,123, INFO : [app.py:45 -      process_data() ] - Processing started
 ```
 
 This breaks down to:
-- Timestamp: `2025-04-05 14:30:22,123`
+- Timestamp: `2019-04-05 14:30:22,123`
 - Log level: `INFO`
 - File and line: `app.py:45`
 - Function name (padded to 20 chars): `process_data()`

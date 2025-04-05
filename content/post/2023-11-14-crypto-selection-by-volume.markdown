@@ -1,7 +1,7 @@
 +++
 description = "Building a data-driven crypto trading tool that selects cryptocurrencies based on trading volume and market activity"
 title = "Crypto Volume Selector: Building a Data-Driven Tool for Cryptocurrency Trading"
-date = "2025-04-05T09:30:00+08:00"
+date = "2023-11-14T09:30:00+08:00"
 categories = ["crypto", "finance"]
 keywords = ["cryptocurrency trading", "trading volume", "crypto selection", "KuCoin API", "market analysis", "crypto liquidity", "trading automation", "CCXT", "crypto data analysis", "Python trading"]
 tags = ["python", "cryptocurrency", "trading", "data-analysis", "automation", "CCXT", "KuCoin", "market-data", "trading-volume", "liquidity"]

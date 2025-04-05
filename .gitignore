@@ -3,9 +3,13 @@ good_themes/*
 ha
 public/*
 tmp/*
-themes/hyde-a
+themes/
 scratches/*
 local.toml
 static/
 abhi1010.github.io/
 static
+
+.DS_Store
+.*.lock
+resources/

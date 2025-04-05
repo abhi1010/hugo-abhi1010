@@ -1,7 +1,7 @@
 +++
 description = "Exploring a versatile Python file utilities module for everyday development tasks"
 title = "Mastering File Operations in Python: A Deep Dive into a Practical Utils Module"
-date = "2025-04-05T09:30:00+08:00"
+date = "2018-05-20T09:30:00+08:00"
 categories = ["code"]
 keywords = ["python", "file operations", "utilities", "development", "file handling", "csv", "json", "automation"]
 tags = ["python", "utilities", "file-operations"]

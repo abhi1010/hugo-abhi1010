@@ -1,7 +1,7 @@
 +++
 description = "Integrating Google Sheets API with pandas DataFrames in Python"
 title = "Seamless Data Flow: Using Google Sheets API with pandas DataFrames"
-date = "2023-02-29T09:30:00+08:00"
+date = "2023-02-27T09:30:00+08:00"
 categories = ["code"]
 keywords = ["google sheets api", "pandas", "dataframes", "python", "data analysis", "automation"]
 tags = ["python", "data", "api"]

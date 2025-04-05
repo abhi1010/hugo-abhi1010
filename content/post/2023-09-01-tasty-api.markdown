@@ -1,0 +1,211 @@
++++
+description = "Automating trading operations with TastyTrade's API"
+title = "Automating Your Trading with TastyTrade's API"
+date = "2023-09-01T09:00:00+08:00"
+categories = ["code", "finance"]
+keywords = ["tastytrade api", "python trading", "automated trading", "stop loss automation", "trading api", "position tracking"]
+tags = ["python", "trading", "automation", "finance"]
++++
+
+# Automating Your Trading with TastyTrade's API
+
+In today's fast-paced trading environment, automation can give you a significant edge. I've been working on a Python project that leverages the TastyTrade API to streamline various trading operations, from monitoring positions to setting automatic stop losses. In this post, I'll walk through this integration and how it can help optimize your trading workflow.
+
+## What This Integration Does
+
+This Python library acts as a wrapper around TastyTrade's API, making it easy to:
+
+- Authenticate securely with your TastyTrade account
+- Monitor your current positions
+- View account balances
+- Place orders programmatically
+- Set automated stop-loss orders
+- Track open orders
+- Work with watchlists
+
+## The Building Blocks
+
+### Authentication & Session Management
+
+The code handles secure authentication with the TastyTrade platform:
+
+```python
+def get_session(username, password):
+  if token_is_recent(TOKEN_PATH):
+    remember_token = load_token(TOKEN_PATH)
+    logger.info(f'Loading the existing token: {remember_token}')
+    # delete the token as well after one time use
+    os.remove(TOKEN_PATH)
+    return Session(username, remember_token=remember_token)
+  else:
+    session = Session(username, password, remember_me=True)
+    logger.info(
+        f'Saving the new token into: {TOKEN_PATH}. val={session.remember_token}'
+    )
+    save_token(session.remember_token, TOKEN_PATH)
+    return session
+```
+
+This elegant approach caches authentication tokens locally to minimize login requests, improving both security and performance.
+
+### Position Tracking
+
+The core `TastyBite` class provides easy access to account positions:
+
+```python
+def get_positions(self, index=0):
+  account_idx = self.get_accounts()[index]
+  positions = account_idx.get_positions(self.session)
+  return positions
+```
+
+### Automated Stop Loss Setting
+
+One of the most powerful features is the ability to automatically set stop losses for positions that don't yet have them:
+
+```python
+def set_stop_loss_for_equities(self,
+                              positions,
+                              stop_loss_threshold=0.08,
+                              dry_run=True):
+  for position in positions:
+    symbol = position.underlying_symbol
+
+    # Calculate stop-loss price
+    stop_loss_price = position.average_open_price * decimal.Decimal(
+        1 - stop_loss_threshold)
+    stop_loss_price = round(stop_loss_price, 2)
+    # ... [order creation and placement code]
+```
+
+This function loops through positions without stop losses and creates appropriate STOP orders with a configurable threshold (default 8% below purchase price).
+
+## Rich Data Visualization
+
+The integration also includes utilities for visualizing your positions in a clear, tabular format:
+
+```python
+def create_rich_table(positions):
+  table = Table(title="Equity Positions")
+
+  columns = [
+      "Symbol", "Type", "Quantity", "Direction", "Close Price", "Open Price",
+      "Realized Day Gain", "Expires At"
+  ]
+
+  for column in columns:
+    table.add_column(column, justify="right")
+
+  # ... [code that populates the table with position data]
+
+  return table
+```
+
+This produces beautiful, formatted tables like:
+
+```
+=== Equity Positions ===
+┌────────┬──────┬──────────┬───────────┬─────────────┬────────────┬───────────────────┬────────────────┐
+│ Symbol │ Type │ Quantity │ Direction │ Close Price │ Open Price │ Realized Day Gain │ Expires At     │
+├────────┼──────┼──────────┼───────────┼─────────────┼────────────┼───────────────────┼────────────────┤
+│ AAPL   │ EQUITY│ 100      │ Long      │ $198.45     │ $186.75    │ $0.00            │ N/A            │
+│ SPY    │ EQUITY│ 50       │ Long      │ $456.32     │ $450.10    │ $0.00            │ N/A            │
+│ TSLA   │ EQUITY│ 25       │ Long      │ $215.65     │ $220.33    │ $0.00            │ N/A            │
+└────────┴──────┴──────────┴───────────┴─────────────┴────────────┴───────────────────┴────────────────┘
+```
+
+## Order Management
+
+The code also makes it easy to view and filter open orders:
+
+```python
+def get_filtered_orders(self, instrument_types=None, order_types=None):
+  open_orders = self.tasty_bite.get_orders()
+  filtered_orders = []
+
+  for order in open_orders:
+    include_order = order.status not in [
+        TT_Order.OrderStatus.REJECTED, TT_Order.OrderStatus.CANCELLED
+    ]
+
+    if instrument_types:
+      include_order = include_order and order.underlying_instrument_type in instrument_types
+
+    if order_types:
+      include_order = include_order and order.order_type in order_types
+
+    if include_order:
+      filtered_orders.append(order)
+
+  return filtered_orders
+```
+
+This allows you to easily filter for specific order types like stop losses or pending limit orders.
+
+## Practical Use Cases
+
+### 1. Risk Management Automation
+
+The standout feature for me has been automating stop loss placement. By running a simple script daily:
+
+```python
+tasty_utils = TastyUtilities()
+positions_without_sl = tasty_utils.get_equity_positions_without_sl()
+tasty_utils.set_stop_loss_for_equities(positions_without_sl)
+```
+
+This ensures all positions get proper stop losses, eliminating the risk of forgetting this crucial risk management step.
+
+### 2. Portfolio Monitoring
+
+The data visualization capabilities make it easy to get a quick snapshot of your positions:
+
+```python
+tasty_utils = TastyUtilities()
+tasty_utils.print_positions()
+```
+
+### 3. Programmatic Order Placement
+
+The `place_order` method makes it simple to execute trades programmatically:
+
+```python
+tasty_utils.place_order(
+    ticker="AAPL",
+    price=190.50,
+    qty=10,
+    action=TT_Order.OrderAction.BUY_TO_OPEN,
+    dry_run=False
+)
+```
+
+## Setting Up Your Own Integration
+
+To use this integration:
+
+1. Install the required packages:
+   ```
+   pip install tastytrade pandas rich
+   ```
+
+2. Set up environment variables for authentication:
+   ```
+   export TASTY_USERNAME="your_username"
+   export TASTY_KEY="encrypted_key"
+   export TASTY_TOKEN="encrypted_token"
+   export TASTY_ACCOUNT_UNIQUE_ID="your_account_id"
+   ```
+
+3. Create a utility script that imports and uses the functionality you need.
+
+## Final Thoughts
+
+Trading automation doesn't need to mean creating complex algorithmic strategies. Even simple automations like this integration can significantly improve your trading efficiency and risk management. The code is modular and well-structured, making it easy to extend with your own custom functionality.
+
+Whether you're looking to automate stop losses, monitor positions, or simply have programmatic access to your TastyTrade account, this integration provides a solid foundation to build upon.
+
+What automation would you like to add to your trading workflow? Let me know in the comments!
+
+---
+
+*Note: Always test any trading automation in dry-run mode first, and be cautious when deploying automated tools that can place real orders. This code includes a `dry_run` parameter on order functions that should be set to `True` until you're confident in its behavior.*
