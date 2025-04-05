@@ -9,8 +9,6 @@ tags = ["python", "finance", "options", "tastytrade", "trading"]
 
 
 
-# Understanding Iron Condor Screener with TastyTrade API
-
 In this blog post, I'll break down a Python program that screens for iron condor options trading opportunities using the TastyTrade API. The code retrieves options data, calculates metrics for iron condor spreads, and ranks the results to find potentially profitable trades.
 
 ## What is an Iron Condor?

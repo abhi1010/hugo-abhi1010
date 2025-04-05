@@ -7,7 +7,6 @@ keywords = ["tastytrade api", "python trading", "automated trading", "stop loss 
 tags = ["python", "trading", "automation", "finance"]
 +++
 
-# Automating Your Trading with TastyTrade's API
 
 In today's fast-paced trading environment, automation can give you a significant edge. I've been working on a Python project that leverages the TastyTrade API to streamline various trading operations, from monitoring positions to setting automatic stop losses. In this post, I'll walk through this integration and how it can help optimize your trading workflow.
 
