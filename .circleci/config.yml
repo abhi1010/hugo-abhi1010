@@ -13,6 +13,8 @@ jobs:
             git config --global push.default matching
             git config --global user.email "abhi.pandey@gmail.com"
             git config --global user.name "abhi1010"
+            sudo apt-get update
+            sudo apt-get install -y openssh-client
 
       - run:
           name: Prepare Repository
