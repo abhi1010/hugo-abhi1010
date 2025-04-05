@@ -1,0 +1,198 @@
++++
+description = "How to manage Python application logs effectively using a custom logger setup"
+title = "Effective Log Management in Python: A Deep Dive into the get_logger Function"
+date = "2019-09-02T09:30:00+08:00"
+categories = ["code"]
+keywords = ["python logger", "log rotation", "rich logging", "python logging", "custom logger", "log management"]
+tags = ["python", "logging", "debugging"]
++++
+
+Effective logging is a critical yet often overlooked aspect of application development. A well-implemented logging system can mean the difference between hours of frustrating debugging and a quick resolution when issues arise. In this post, I'll walk through a powerful custom logging utility function called `get_logger` that provides flexible, configurable logging capabilities for Python applications.
+
+## Understanding the `get_logger` Function
+
+The `get_logger` function creates a configured logger with console output and rotating file storage. Let's break down what it does and how to use it effectively:
+
+```python
+def get_logger(log_name='cpr-btc', should_add_ts=False, use_rich=False):
+    logger = logging.getLogger('root')
+    if not len(logger.handlers):
+        logger.setLevel(logging.INFO)
+
+        formatter = logging.Formatter(
+            '%(asctime)s, %(levelname)s : [%(filename)s:%(lineno)s - %(funcName)20s() ] - %(message)s'
+        )
+
+        if use_rich:
+            rich_handler = RichHandler(rich_tracebacks=True)
+            rich_handler.setLevel(logging.DEBUG)
+            logger.addHandler(rich_handler)
+        else:
+            # Stream handler for printing to console
+            stdout_handler = logging.StreamHandler()
+            stdout_handler.setLevel(logging.INFO)
+            stdout_handler.setFormatter(formatter)
+            logger.addHandler(stdout_handler)
+
+        check_and_create_directory(LOG_DIR)
+
+        if should_add_ts:
+            log_name += datetime.datetime.now().strftime("__%Y-%m-%d__%H-%M")
+
+        # Rotating file handler for saving logs to file
+        logger_path = os.path.join(LOG_DIR, f'{log_name}.log')
+        file_handler = TimedRotatingFileHandler(filename=logger_path,
+                                                when='midnight',
+                                                backupCount=10)
+        file_handler.setLevel(logging.DEBUG)
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+        logger.info(f'Logger path = {logger_path}')
+        print_stack_trace()
+
+    return logger
+```
+
+## Key Features of This Logger
+
+The function creates a logger with several powerful features:
+
+1. **Singleton Pattern**: It ensures only one logger instance exists by checking for existing handlers
+2. **Console Output**: Provides real-time feedback to developers via stdout
+3. **File Rotation**: Automatically manages log file growth with TimedRotatingFileHandler
+4. **Rich Formatting Option**: Optional integration with the Rich library for colorful, readable logs
+5. **Timestamp Inclusion**: Optional timestamp in log filenames for specific log sessions
+6. **Detailed Context**: Includes filename, line number, and function name in log entries
+
+## How to Use This Logger Effectively
+
+### Basic Usage
+
+The simplest way to use this logger is with default settings:
+
+```python
+logger = get_logger()
+logger.info("Application started")
+logger.warning("Resource usage high")
+logger.error("Failed to connect to database")
+```
+
+### With Rich for Enhanced Console Output
+
+For development environments where you want more readable console output:
+
+```python
+logger = get_logger(use_rich=True)
+logger.info("Starting data processing")
+logger.debug("Processing item 1 of 1000")
+```
+
+### Session-Specific Logs
+
+When debugging a specific issue or running important processes:
+
+```python
+# Creates a timestamped log file like cpr-btc__2025-04-05__14-30.log
+debug_logger = get_logger(should_add_ts=True)
+debug_logger.info("Starting critical data migration")
+```
+
+### Custom Named Logs
+
+For different components of your application:
+
+```python
+auth_logger = get_logger(log_name='authentication')
+user_logger = get_logger(log_name='user-actions')
+data_logger = get_logger(log_name='data-processing')
+```
+
+## Best Practices for Effective Log Management
+
+### 1. Use Appropriate Log Levels
+
+The logger supports different log levels, use them correctly:
+- `DEBUG`: Detailed information for diagnosing problems
+- `INFO`: Confirmation that things are working as expected
+- `WARNING`: Indication that something unexpected happened
+- `ERROR`: Due to a more serious problem, the software couldn't perform some function
+- `CRITICAL`: A serious error that might prevent the program from continuing
+
+### 2. Structure Your Log Messages
+
+Keep log messages consistent and informative:
+
+```python
+# Instead of:
+logger.info("Transaction processed")
+
+# Use:
+logger.info(f"Transaction {tx_id} processed for user {user_id}: ${amount}")
+```
+
+### 3. Include Context But Avoid Sensitive Data
+
+Include enough context to understand the log entry:
+
+```python
+logger.info(f"API request to {endpoint} completed in {response_time}ms with status {status_code}")
+```
+
+But avoid logging sensitive information:
+
+```python
+# DON'T do this:
+logger.debug(f"User login attempt with password {password}")
+
+# DO this instead:
+logger.debug(f"User login attempt for {username}")
+```
+
+### 4. Set Up Log Monitoring
+
+Consider setting up monitoring for your log files to catch issues early:
+
+```python
+# Example monitoring setup
+def check_for_errors():
+    with open(f"{LOG_DIR}/cpr-btc.log", "r") as f:
+        if "ERROR" in f.read():
+            send_alert("Errors detected in application log")
+```
+
+### 5. Manage Log Rotation
+
+Our function already sets up log rotation with `TimedRotatingFileHandler`, but you can customize it:
+
+```python
+# For more frequent rotation (every hour instead of daily):
+file_handler = TimedRotatingFileHandler(
+    filename=logger_path,
+    when='H',  # Hourly
+    backupCount=24  # Keep 24 hours of logs
+)
+```
+
+## Understanding the Log Format
+
+The log format used by our function is comprehensive:
+
+```
+2025-04-05 14:30:22,123, INFO : [app.py:45 -      process_data() ] - Processing started
+```
+
+This breaks down to:
+- Timestamp: `2025-04-05 14:30:22,123`
+- Log level: `INFO`
+- File and line: `app.py:45`
+- Function name (padded to 20 chars): `process_data()`
+- Message: `Processing started`
+
+## Conclusion
+
+Implementing proper logging is an investment that pays dividends when debugging issues in production. The `get_logger` function provides a robust logging foundation that you can use as-is or customize to meet your specific needs.
+
+By understanding and effectively using this logger, you'll improve your application's maintainability and make troubleshooting much more efficient. The combination of console output for immediate feedback and rotating file logs for historical analysis creates a comprehensive logging system suitable for projects of any size.
+
+Happy logging, and may your bugs be easier to find!
