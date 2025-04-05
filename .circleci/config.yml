@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: abhi1010/hugo_015:latest
+      - image: hugomods/hugo:latest
     steps:
       - checkout
 
