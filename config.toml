@@ -32,9 +32,8 @@ ignoreLogs = ['warning-goldmark-raw-html']
 # pygmentsstyle = "default"
 # pygmentsstyle = "fruity"
 
-# pygmentsstyle = "tango"
+pygmentsstyle = "rrt"
 
-pygmentsstyle = "xcode"
 pygmentsuseclasses = false
 
 
@@ -76,8 +75,8 @@ url = "https://www.linkedin.com/in/apandey10/"
 #
 
 # [[params.theme]]
-# # light | dark | system
-# default = "system"
+# # # light | dark | system
+# default = "light"
 # displayToggle = true
 
 [params]
