@@ -2,7 +2,7 @@
 description = "Options Volatility Visualization with Python: Understanding Market Sentiment"
 title = "Building an Options Volatility Visualization Tool"
 date = "2024-10-13T00:33:29+08:00"
-categories = ["finance", "trading"]
+categories = ["finance"]
 keywords = ["python", "options", "volatility", "visualization", "trading", "volvisualizer", "skew", "market analysis"]
 draft = false
 tags = ["python", "options", "visualization"]
